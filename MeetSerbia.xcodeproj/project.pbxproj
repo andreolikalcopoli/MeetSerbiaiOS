@@ -1,0 +1,607 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		12CA918A29B5C894007A322B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12CA918929B5C894007A322B /* AppDelegate.swift */; };
+		12CA918C29B5C894007A322B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12CA918B29B5C894007A322B /* SceneDelegate.swift */; };
+		12CA918E29B5C894007A322B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12CA918D29B5C894007A322B /* ViewController.swift */; };
+		12CA919129B5C894007A322B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 12CA918F29B5C894007A322B /* Main.storyboard */; };
+		12CA919329B5C895007A322B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 12CA919229B5C895007A322B /* Assets.xcassets */; };
+		12CA919629B5C895007A322B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 12CA919429B5C895007A322B /* LaunchScreen.storyboard */; };
+		12CA91A129B5C895007A322B /* MeetSerbiaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12CA91A029B5C895007A322B /* MeetSerbiaTests.swift */; };
+		12CA91AB29B5C895007A322B /* MeetSerbiaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12CA91AA29B5C895007A322B /* MeetSerbiaUITests.swift */; };
+		12CA91AD29B5C895007A322B /* MeetSerbiaUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12CA91AC29B5C895007A322B /* MeetSerbiaUITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		12CA919D29B5C895007A322B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 12CA917E29B5C894007A322B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 12CA918529B5C894007A322B;
+			remoteInfo = MeetSerbia;
+		};
+		12CA91A729B5C895007A322B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 12CA917E29B5C894007A322B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 12CA918529B5C894007A322B;
+			remoteInfo = MeetSerbia;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		12CA918629B5C894007A322B /* MeetSerbia.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MeetSerbia.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		12CA918929B5C894007A322B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		12CA918B29B5C894007A322B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		12CA918D29B5C894007A322B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		12CA919029B5C894007A322B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		12CA919229B5C895007A322B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		12CA919529B5C895007A322B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		12CA919729B5C895007A322B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		12CA919C29B5C895007A322B /* MeetSerbiaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MeetSerbiaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		12CA91A029B5C895007A322B /* MeetSerbiaTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeetSerbiaTests.swift; sourceTree = "<group>"; };
+		12CA91A629B5C895007A322B /* MeetSerbiaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MeetSerbiaUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		12CA91AA29B5C895007A322B /* MeetSerbiaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeetSerbiaUITests.swift; sourceTree = "<group>"; };
+		12CA91AC29B5C895007A322B /* MeetSerbiaUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeetSerbiaUITestsLaunchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		12CA918329B5C894007A322B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		12CA919929B5C895007A322B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		12CA91A329B5C895007A322B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		12CA917D29B5C894007A322B = {
+			isa = PBXGroup;
+			children = (
+				12CA918829B5C894007A322B /* MeetSerbia */,
+				12CA919F29B5C895007A322B /* MeetSerbiaTests */,
+				12CA91A929B5C895007A322B /* MeetSerbiaUITests */,
+				12CA918729B5C894007A322B /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		12CA918729B5C894007A322B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				12CA918629B5C894007A322B /* MeetSerbia.app */,
+				12CA919C29B5C895007A322B /* MeetSerbiaTests.xctest */,
+				12CA91A629B5C895007A322B /* MeetSerbiaUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		12CA918829B5C894007A322B /* MeetSerbia */ = {
+			isa = PBXGroup;
+			children = (
+				12CA918929B5C894007A322B /* AppDelegate.swift */,
+				12CA918B29B5C894007A322B /* SceneDelegate.swift */,
+				12CA918D29B5C894007A322B /* ViewController.swift */,
+				12CA918F29B5C894007A322B /* Main.storyboard */,
+				12CA919229B5C895007A322B /* Assets.xcassets */,
+				12CA919429B5C895007A322B /* LaunchScreen.storyboard */,
+				12CA919729B5C895007A322B /* Info.plist */,
+			);
+			path = MeetSerbia;
+			sourceTree = "<group>";
+		};
+		12CA919F29B5C895007A322B /* MeetSerbiaTests */ = {
+			isa = PBXGroup;
+			children = (
+				12CA91A029B5C895007A322B /* MeetSerbiaTests.swift */,
+			);
+			path = MeetSerbiaTests;
+			sourceTree = "<group>";
+		};
+		12CA91A929B5C895007A322B /* MeetSerbiaUITests */ = {
+			isa = PBXGroup;
+			children = (
+				12CA91AA29B5C895007A322B /* MeetSerbiaUITests.swift */,
+				12CA91AC29B5C895007A322B /* MeetSerbiaUITestsLaunchTests.swift */,
+			);
+			path = MeetSerbiaUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		12CA918529B5C894007A322B /* MeetSerbia */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 12CA91B029B5C895007A322B /* Build configuration list for PBXNativeTarget "MeetSerbia" */;
+			buildPhases = (
+				12CA918229B5C894007A322B /* Sources */,
+				12CA918329B5C894007A322B /* Frameworks */,
+				12CA918429B5C894007A322B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MeetSerbia;
+			productName = MeetSerbia;
+			productReference = 12CA918629B5C894007A322B /* MeetSerbia.app */;
+			productType = "com.apple.product-type.application";
+		};
+		12CA919B29B5C895007A322B /* MeetSerbiaTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 12CA91B329B5C895007A322B /* Build configuration list for PBXNativeTarget "MeetSerbiaTests" */;
+			buildPhases = (
+				12CA919829B5C895007A322B /* Sources */,
+				12CA919929B5C895007A322B /* Frameworks */,
+				12CA919A29B5C895007A322B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				12CA919E29B5C895007A322B /* PBXTargetDependency */,
+			);
+			name = MeetSerbiaTests;
+			productName = MeetSerbiaTests;
+			productReference = 12CA919C29B5C895007A322B /* MeetSerbiaTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		12CA91A529B5C895007A322B /* MeetSerbiaUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 12CA91B629B5C895007A322B /* Build configuration list for PBXNativeTarget "MeetSerbiaUITests" */;
+			buildPhases = (
+				12CA91A229B5C895007A322B /* Sources */,
+				12CA91A329B5C895007A322B /* Frameworks */,
+				12CA91A429B5C895007A322B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				12CA91A829B5C895007A322B /* PBXTargetDependency */,
+			);
+			name = MeetSerbiaUITests;
+			productName = MeetSerbiaUITests;
+			productReference = 12CA91A629B5C895007A322B /* MeetSerbiaUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		12CA917E29B5C894007A322B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1420;
+				LastUpgradeCheck = 1420;
+				TargetAttributes = {
+					12CA918529B5C894007A322B = {
+						CreatedOnToolsVersion = 14.2;
+					};
+					12CA919B29B5C895007A322B = {
+						CreatedOnToolsVersion = 14.2;
+						TestTargetID = 12CA918529B5C894007A322B;
+					};
+					12CA91A529B5C895007A322B = {
+						CreatedOnToolsVersion = 14.2;
+						TestTargetID = 12CA918529B5C894007A322B;
+					};
+				};
+			};
+			buildConfigurationList = 12CA918129B5C894007A322B /* Build configuration list for PBXProject "MeetSerbia" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 12CA917D29B5C894007A322B;
+			productRefGroup = 12CA918729B5C894007A322B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				12CA918529B5C894007A322B /* MeetSerbia */,
+				12CA919B29B5C895007A322B /* MeetSerbiaTests */,
+				12CA91A529B5C895007A322B /* MeetSerbiaUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		12CA918429B5C894007A322B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				12CA919629B5C895007A322B /* LaunchScreen.storyboard in Resources */,
+				12CA919329B5C895007A322B /* Assets.xcassets in Resources */,
+				12CA919129B5C894007A322B /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		12CA919A29B5C895007A322B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		12CA91A429B5C895007A322B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		12CA918229B5C894007A322B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				12CA918E29B5C894007A322B /* ViewController.swift in Sources */,
+				12CA918A29B5C894007A322B /* AppDelegate.swift in Sources */,
+				12CA918C29B5C894007A322B /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		12CA919829B5C895007A322B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				12CA91A129B5C895007A322B /* MeetSerbiaTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		12CA91A229B5C895007A322B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				12CA91AB29B5C895007A322B /* MeetSerbiaUITests.swift in Sources */,
+				12CA91AD29B5C895007A322B /* MeetSerbiaUITestsLaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		12CA919E29B5C895007A322B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 12CA918529B5C894007A322B /* MeetSerbia */;
+			targetProxy = 12CA919D29B5C895007A322B /* PBXContainerItemProxy */;
+		};
+		12CA91A829B5C895007A322B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 12CA918529B5C894007A322B /* MeetSerbia */;
+			targetProxy = 12CA91A729B5C895007A322B /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		12CA918F29B5C894007A322B /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				12CA919029B5C894007A322B /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		12CA919429B5C895007A322B /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				12CA919529B5C895007A322B /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		12CA91AE29B5C895007A322B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		12CA91AF29B5C895007A322B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		12CA91B129B5C895007A322B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 8LWW6684F7;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = MeetSerbia/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.magma.MeetSerbia;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		12CA91B229B5C895007A322B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 8LWW6684F7;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = MeetSerbia/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.magma.MeetSerbia;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		12CA91B429B5C895007A322B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 8LWW6684F7;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.magma.MeetSerbiaTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MeetSerbia.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/MeetSerbia";
+			};
+			name = Debug;
+		};
+		12CA91B529B5C895007A322B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 8LWW6684F7;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.magma.MeetSerbiaTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MeetSerbia.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/MeetSerbia";
+			};
+			name = Release;
+		};
+		12CA91B729B5C895007A322B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 8LWW6684F7;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.magma.MeetSerbiaUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = MeetSerbia;
+			};
+			name = Debug;
+		};
+		12CA91B829B5C895007A322B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 8LWW6684F7;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.magma.MeetSerbiaUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = MeetSerbia;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		12CA918129B5C894007A322B /* Build configuration list for PBXProject "MeetSerbia" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				12CA91AE29B5C895007A322B /* Debug */,
+				12CA91AF29B5C895007A322B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		12CA91B029B5C895007A322B /* Build configuration list for PBXNativeTarget "MeetSerbia" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				12CA91B129B5C895007A322B /* Debug */,
+				12CA91B229B5C895007A322B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		12CA91B329B5C895007A322B /* Build configuration list for PBXNativeTarget "MeetSerbiaTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				12CA91B429B5C895007A322B /* Debug */,
+				12CA91B529B5C895007A322B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		12CA91B629B5C895007A322B /* Build configuration list for PBXNativeTarget "MeetSerbiaUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				12CA91B729B5C895007A322B /* Debug */,
+				12CA91B829B5C895007A322B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 12CA917E29B5C894007A322B /* Project object */;
+}
