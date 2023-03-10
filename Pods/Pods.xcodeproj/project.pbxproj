@@ -1,0 +1,755 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0F402B1EB40D0D3B08B30947A668DBCC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
+		1EDFB0D6443C83B4C1EAA742395377AA /* Pods-MeetSerbia-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 2766C5DDC7709A7792F5797A991A0DB9 /* Pods-MeetSerbia-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		24D71430344C50CC189FA60B274CABAD /* Pods-MeetSerbiaTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = EDC33B6AA88229055E285EDB0905AD09 /* Pods-MeetSerbiaTests-dummy.m */; };
+		4B8D58360D4734DF7848C130FA42D935 /* Pods-MeetSerbiaTests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = B7850DFEAAECA0589CBEEE18EC194AD5 /* Pods-MeetSerbiaTests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8B1B3BD5846EF541F9612C8DB2C7472B /* Pods-MeetSerbia-MeetSerbiaUITests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 3020667187B619EECC4C32F1BF0602BC /* Pods-MeetSerbia-MeetSerbiaUITests-dummy.m */; };
+		A259F6E28D77C49A839B31097BA009F3 /* Pods-MeetSerbia-MeetSerbiaUITests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 570B60E0123C80D5B4B78EF0E8A14948 /* Pods-MeetSerbia-MeetSerbiaUITests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B3B8F25AB6F31BBD85D2C9DD2CF81F4D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
+		C36C60CED36FC4FBC7F656F20EFA9BA8 /* Pods-MeetSerbia-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A740C25B9E6DD850F52F2C9CD0F5D79 /* Pods-MeetSerbia-dummy.m */; };
+		D50AAB40AE534105F4CAA4C48F7AAD92 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		E17E16E3E9B0E0AE6B230FA427B549EC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E3A7EC49343805613BD0B9586239D9EF;
+			remoteInfo = "Pods-MeetSerbia";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		06F55D78D2C550B4F5FFF55521DE028B /* Pods-MeetSerbia */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-MeetSerbia"; path = Pods_MeetSerbia.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		16173D78102A9B31A7EF0B51936AE53D /* Pods-MeetSerbia-MeetSerbiaUITests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-MeetSerbia-MeetSerbiaUITests.modulemap"; sourceTree = "<group>"; };
+		185748A165D5CC7521F1686B7B346366 /* Pods-MeetSerbia-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-MeetSerbia-acknowledgements.markdown"; sourceTree = "<group>"; };
+		1D60FBBF976AE50CDDEBE315E3956670 /* Pods-MeetSerbia.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MeetSerbia.release.xcconfig"; sourceTree = "<group>"; };
+		1FDAEBD4DD1FEEEC44DD592D6C790898 /* Pods-MeetSerbiaTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MeetSerbiaTests.debug.xcconfig"; sourceTree = "<group>"; };
+		21B2A1EEAD4F1D51E1E6F6C646BB2404 /* Pods-MeetSerbiaTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-MeetSerbiaTests-acknowledgements.plist"; sourceTree = "<group>"; };
+		2578923E71FAD7659B07530417D51E26 /* Pods-MeetSerbia-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-MeetSerbia-acknowledgements.plist"; sourceTree = "<group>"; };
+		2766C5DDC7709A7792F5797A991A0DB9 /* Pods-MeetSerbia-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-MeetSerbia-umbrella.h"; sourceTree = "<group>"; };
+		3020667187B619EECC4C32F1BF0602BC /* Pods-MeetSerbia-MeetSerbiaUITests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-MeetSerbia-MeetSerbiaUITests-dummy.m"; sourceTree = "<group>"; };
+		43CC9655563FB99BEFCB2A86F8462AFB /* Pods-MeetSerbiaTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-MeetSerbiaTests.modulemap"; sourceTree = "<group>"; };
+		46502F92CF8B072EF89EBEF586DCAF8F /* Pods-MeetSerbia.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MeetSerbia.debug.xcconfig"; sourceTree = "<group>"; };
+		570B60E0123C80D5B4B78EF0E8A14948 /* Pods-MeetSerbia-MeetSerbiaUITests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-MeetSerbia-MeetSerbiaUITests-umbrella.h"; sourceTree = "<group>"; };
+		5ADAF461AA6366988BF8CD08229911E7 /* Pods-MeetSerbia.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-MeetSerbia.modulemap"; sourceTree = "<group>"; };
+		641C7DB952002A7BE9145B6A634290BD /* Pods-MeetSerbia-MeetSerbiaUITests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-MeetSerbia-MeetSerbiaUITests-Info.plist"; sourceTree = "<group>"; };
+		64469FA28E7E25A6DE819586B8C21D6E /* Pods-MeetSerbiaTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MeetSerbiaTests.release.xcconfig"; sourceTree = "<group>"; };
+		73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		757BCB7E76F3820A975D802D149E6227 /* Pods-MeetSerbia-MeetSerbiaUITests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-MeetSerbia-MeetSerbiaUITests-acknowledgements.plist"; sourceTree = "<group>"; };
+		79F412367808C6E1A1B873DC4B0B5491 /* Pods-MeetSerbia-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-MeetSerbia-Info.plist"; sourceTree = "<group>"; };
+		7C32D40098EF913C96AD8566EFEE57AA /* Pods-MeetSerbia-MeetSerbiaUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MeetSerbia-MeetSerbiaUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		8A740C25B9E6DD850F52F2C9CD0F5D79 /* Pods-MeetSerbia-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-MeetSerbia-dummy.m"; sourceTree = "<group>"; };
+		92D78A28ED203260FAE704E27977B4BF /* Pods-MeetSerbiaTests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-MeetSerbiaTests-Info.plist"; sourceTree = "<group>"; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9E0CFD0E90168CB220D13F1714C1314A /* Pods-MeetSerbia-MeetSerbiaUITests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-MeetSerbia-MeetSerbiaUITests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		A11FDCAFBC94A9B27A2F2EEA48D4473B /* Pods-MeetSerbiaTests */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-MeetSerbiaTests"; path = Pods_MeetSerbiaTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B7850DFEAAECA0589CBEEE18EC194AD5 /* Pods-MeetSerbiaTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-MeetSerbiaTests-umbrella.h"; sourceTree = "<group>"; };
+		D1F258D4DE18B16D657758A2A7606860 /* Pods-MeetSerbia-MeetSerbiaUITests */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-MeetSerbia-MeetSerbiaUITests"; path = Pods_MeetSerbia_MeetSerbiaUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E9B88D3C0178742F21C76A4EFFBE3528 /* Pods-MeetSerbiaTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-MeetSerbiaTests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		EDC33B6AA88229055E285EDB0905AD09 /* Pods-MeetSerbiaTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-MeetSerbiaTests-dummy.m"; sourceTree = "<group>"; };
+		FD99EC8E327BF4FD90FB37CC01525BE5 /* Pods-MeetSerbia-MeetSerbiaUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MeetSerbia-MeetSerbiaUITests.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		47D9A1E060E03A07B6993091B0E65131 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D50AAB40AE534105F4CAA4C48F7AAD92 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4EC8089E228B3E49A92B1AD0358F19FD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0F402B1EB40D0D3B08B30947A668DBCC /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B39992150E5F4B0E2B8F2044128D7BA3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B3B8F25AB6F31BBD85D2C9DD2CF81F4D /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		14CA4ED039984E24A1B6D38EBC7D0842 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				BCF433527D3964B6219599018625286F /* Pods-MeetSerbia */,
+				DB21EAEF1B4979B1BD0B393F7780DFC4 /* Pods-MeetSerbia-MeetSerbiaUITests */,
+				8997318F9EA33EE3DCF20AD0411E1AFD /* Pods-MeetSerbiaTests */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		202636A16C7EA3D94B883F0540122070 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				06F55D78D2C550B4F5FFF55521DE028B /* Pods-MeetSerbia */,
+				D1F258D4DE18B16D657758A2A7606860 /* Pods-MeetSerbia-MeetSerbiaUITests */,
+				A11FDCAFBC94A9B27A2F2EEA48D4473B /* Pods-MeetSerbiaTests */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		578452D2E740E91742655AC8F1636D1F /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		8997318F9EA33EE3DCF20AD0411E1AFD /* Pods-MeetSerbiaTests */ = {
+			isa = PBXGroup;
+			children = (
+				43CC9655563FB99BEFCB2A86F8462AFB /* Pods-MeetSerbiaTests.modulemap */,
+				E9B88D3C0178742F21C76A4EFFBE3528 /* Pods-MeetSerbiaTests-acknowledgements.markdown */,
+				21B2A1EEAD4F1D51E1E6F6C646BB2404 /* Pods-MeetSerbiaTests-acknowledgements.plist */,
+				EDC33B6AA88229055E285EDB0905AD09 /* Pods-MeetSerbiaTests-dummy.m */,
+				92D78A28ED203260FAE704E27977B4BF /* Pods-MeetSerbiaTests-Info.plist */,
+				B7850DFEAAECA0589CBEEE18EC194AD5 /* Pods-MeetSerbiaTests-umbrella.h */,
+				1FDAEBD4DD1FEEEC44DD592D6C790898 /* Pods-MeetSerbiaTests.debug.xcconfig */,
+				64469FA28E7E25A6DE819586B8C21D6E /* Pods-MeetSerbiaTests.release.xcconfig */,
+			);
+			name = "Pods-MeetSerbiaTests";
+			path = "Target Support Files/Pods-MeetSerbiaTests";
+			sourceTree = "<group>";
+		};
+		BCF433527D3964B6219599018625286F /* Pods-MeetSerbia */ = {
+			isa = PBXGroup;
+			children = (
+				5ADAF461AA6366988BF8CD08229911E7 /* Pods-MeetSerbia.modulemap */,
+				185748A165D5CC7521F1686B7B346366 /* Pods-MeetSerbia-acknowledgements.markdown */,
+				2578923E71FAD7659B07530417D51E26 /* Pods-MeetSerbia-acknowledgements.plist */,
+				8A740C25B9E6DD850F52F2C9CD0F5D79 /* Pods-MeetSerbia-dummy.m */,
+				79F412367808C6E1A1B873DC4B0B5491 /* Pods-MeetSerbia-Info.plist */,
+				2766C5DDC7709A7792F5797A991A0DB9 /* Pods-MeetSerbia-umbrella.h */,
+				46502F92CF8B072EF89EBEF586DCAF8F /* Pods-MeetSerbia.debug.xcconfig */,
+				1D60FBBF976AE50CDDEBE315E3956670 /* Pods-MeetSerbia.release.xcconfig */,
+			);
+			name = "Pods-MeetSerbia";
+			path = "Target Support Files/Pods-MeetSerbia";
+			sourceTree = "<group>";
+		};
+		CF1408CF629C7361332E53B88F7BD30C = {
+			isa = PBXGroup;
+			children = (
+				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
+				D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */,
+				202636A16C7EA3D94B883F0540122070 /* Products */,
+				14CA4ED039984E24A1B6D38EBC7D0842 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				578452D2E740E91742655AC8F1636D1F /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DB21EAEF1B4979B1BD0B393F7780DFC4 /* Pods-MeetSerbia-MeetSerbiaUITests */ = {
+			isa = PBXGroup;
+			children = (
+				16173D78102A9B31A7EF0B51936AE53D /* Pods-MeetSerbia-MeetSerbiaUITests.modulemap */,
+				9E0CFD0E90168CB220D13F1714C1314A /* Pods-MeetSerbia-MeetSerbiaUITests-acknowledgements.markdown */,
+				757BCB7E76F3820A975D802D149E6227 /* Pods-MeetSerbia-MeetSerbiaUITests-acknowledgements.plist */,
+				3020667187B619EECC4C32F1BF0602BC /* Pods-MeetSerbia-MeetSerbiaUITests-dummy.m */,
+				641C7DB952002A7BE9145B6A634290BD /* Pods-MeetSerbia-MeetSerbiaUITests-Info.plist */,
+				570B60E0123C80D5B4B78EF0E8A14948 /* Pods-MeetSerbia-MeetSerbiaUITests-umbrella.h */,
+				7C32D40098EF913C96AD8566EFEE57AA /* Pods-MeetSerbia-MeetSerbiaUITests.debug.xcconfig */,
+				FD99EC8E327BF4FD90FB37CC01525BE5 /* Pods-MeetSerbia-MeetSerbiaUITests.release.xcconfig */,
+			);
+			name = "Pods-MeetSerbia-MeetSerbiaUITests";
+			path = "Target Support Files/Pods-MeetSerbia-MeetSerbiaUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		37F2F43AA78485E036EB3AE87B0832DF /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1EDFB0D6443C83B4C1EAA742395377AA /* Pods-MeetSerbia-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B8407DA37C040B0C3DABAE6119F7C51C /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4B8D58360D4734DF7848C130FA42D935 /* Pods-MeetSerbiaTests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CFA9E938FB721057CC432837D0D7337D /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A259F6E28D77C49A839B31097BA009F3 /* Pods-MeetSerbia-MeetSerbiaUITests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		C13C279A33ADEC75ABB748A6DCCD77F1 /* Pods-MeetSerbiaTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D44FBAC3B3810D89F524DF5ECF622C87 /* Build configuration list for PBXNativeTarget "Pods-MeetSerbiaTests" */;
+			buildPhases = (
+				B8407DA37C040B0C3DABAE6119F7C51C /* Headers */,
+				60D6E32F6D16755921528C5A494159C7 /* Sources */,
+				47D9A1E060E03A07B6993091B0E65131 /* Frameworks */,
+				60961C11087529C758618372660B83E1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				25A6735FEA472B383A69DF1D58372E29 /* PBXTargetDependency */,
+			);
+			name = "Pods-MeetSerbiaTests";
+			productName = Pods_MeetSerbiaTests;
+			productReference = A11FDCAFBC94A9B27A2F2EEA48D4473B /* Pods-MeetSerbiaTests */;
+			productType = "com.apple.product-type.framework";
+		};
+		E3A7EC49343805613BD0B9586239D9EF /* Pods-MeetSerbia */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7E89825D7E95A34C71F2F9FCC47E101F /* Build configuration list for PBXNativeTarget "Pods-MeetSerbia" */;
+			buildPhases = (
+				37F2F43AA78485E036EB3AE87B0832DF /* Headers */,
+				7300E588CC3D994AFB51C0D7A0725616 /* Sources */,
+				B39992150E5F4B0E2B8F2044128D7BA3 /* Frameworks */,
+				C34764D4DC331C419EDADBF782C0D293 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-MeetSerbia";
+			productName = Pods_MeetSerbia;
+			productReference = 06F55D78D2C550B4F5FFF55521DE028B /* Pods-MeetSerbia */;
+			productType = "com.apple.product-type.framework";
+		};
+		F7798DACB51F7596DD723A34A8F76F3E /* Pods-MeetSerbia-MeetSerbiaUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2E0E102488CA9F77DE9F0936A2C8CCE9 /* Build configuration list for PBXNativeTarget "Pods-MeetSerbia-MeetSerbiaUITests" */;
+			buildPhases = (
+				CFA9E938FB721057CC432837D0D7337D /* Headers */,
+				2BB370814C8543011C465833F3829F80 /* Sources */,
+				4EC8089E228B3E49A92B1AD0358F19FD /* Frameworks */,
+				E4F22AAD4617EE83DB6BC41C7428265F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-MeetSerbia-MeetSerbiaUITests";
+			productName = Pods_MeetSerbia_MeetSerbiaUITests;
+			productReference = D1F258D4DE18B16D657758A2A7606860 /* Pods-MeetSerbia-MeetSerbiaUITests */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BFDFE7DC352907FC980B868725387E98 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1300;
+				LastUpgradeCheck = 1300;
+			};
+			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				en,
+			);
+			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
+			productRefGroup = 202636A16C7EA3D94B883F0540122070 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				E3A7EC49343805613BD0B9586239D9EF /* Pods-MeetSerbia */,
+				F7798DACB51F7596DD723A34A8F76F3E /* Pods-MeetSerbia-MeetSerbiaUITests */,
+				C13C279A33ADEC75ABB748A6DCCD77F1 /* Pods-MeetSerbiaTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		60961C11087529C758618372660B83E1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C34764D4DC331C419EDADBF782C0D293 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E4F22AAD4617EE83DB6BC41C7428265F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2BB370814C8543011C465833F3829F80 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8B1B3BD5846EF541F9612C8DB2C7472B /* Pods-MeetSerbia-MeetSerbiaUITests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		60D6E32F6D16755921528C5A494159C7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				24D71430344C50CC189FA60B274CABAD /* Pods-MeetSerbiaTests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7300E588CC3D994AFB51C0D7A0725616 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C36C60CED36FC4FBC7F656F20EFA9BA8 /* Pods-MeetSerbia-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		25A6735FEA472B383A69DF1D58372E29 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-MeetSerbia";
+			target = E3A7EC49343805613BD0B9586239D9EF /* Pods-MeetSerbia */;
+			targetProxy = E17E16E3E9B0E0AE6B230FA427B549EC /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		12DFD17D43D7C555E755D0629B33CC17 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FD99EC8E327BF4FD90FB37CC01525BE5 /* Pods-MeetSerbia-MeetSerbiaUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-MeetSerbia-MeetSerbiaUITests/Pods-MeetSerbia-MeetSerbiaUITests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-MeetSerbia-MeetSerbiaUITests/Pods-MeetSerbia-MeetSerbiaUITests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		349F0D7F404DE0C8BC39A3E991827119 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7C32D40098EF913C96AD8566EFEE57AA /* Pods-MeetSerbia-MeetSerbiaUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-MeetSerbia-MeetSerbiaUITests/Pods-MeetSerbia-MeetSerbiaUITests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-MeetSerbia-MeetSerbiaUITests/Pods-MeetSerbia-MeetSerbiaUITests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		446BA1B9A1F1F2F95D04E5F82EB1B0F4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		56D06C002C27B0FBA9BD67DFEF7B3D71 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1FDAEBD4DD1FEEEC44DD592D6C790898 /* Pods-MeetSerbiaTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-MeetSerbiaTests/Pods-MeetSerbiaTests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-MeetSerbiaTests/Pods-MeetSerbiaTests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		5883384D3121E0EFD2E1A4BCF5A0161C /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1D60FBBF976AE50CDDEBE315E3956670 /* Pods-MeetSerbia.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-MeetSerbia/Pods-MeetSerbia-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-MeetSerbia/Pods-MeetSerbia.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		5D47E2EFAC6FAC81A782D9BFD8736F53 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+		63E26763C04B713AC124F02EEFDF2291 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 64469FA28E7E25A6DE819586B8C21D6E /* Pods-MeetSerbiaTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-MeetSerbiaTests/Pods-MeetSerbiaTests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-MeetSerbiaTests/Pods-MeetSerbiaTests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		9293A41EEA0A1674EF177131C7EE060B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 46502F92CF8B072EF89EBEF586DCAF8F /* Pods-MeetSerbia.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-MeetSerbia/Pods-MeetSerbia-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-MeetSerbia/Pods-MeetSerbia.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2E0E102488CA9F77DE9F0936A2C8CCE9 /* Build configuration list for PBXNativeTarget "Pods-MeetSerbia-MeetSerbiaUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				349F0D7F404DE0C8BC39A3E991827119 /* Debug */,
+				12DFD17D43D7C555E755D0629B33CC17 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				446BA1B9A1F1F2F95D04E5F82EB1B0F4 /* Debug */,
+				5D47E2EFAC6FAC81A782D9BFD8736F53 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7E89825D7E95A34C71F2F9FCC47E101F /* Build configuration list for PBXNativeTarget "Pods-MeetSerbia" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9293A41EEA0A1674EF177131C7EE060B /* Debug */,
+				5883384D3121E0EFD2E1A4BCF5A0161C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D44FBAC3B3810D89F524DF5ECF622C87 /* Build configuration list for PBXNativeTarget "Pods-MeetSerbiaTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				56D06C002C27B0FBA9BD67DFEF7B3D71 /* Debug */,
+				63E26763C04B713AC124F02EEFDF2291 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+}
