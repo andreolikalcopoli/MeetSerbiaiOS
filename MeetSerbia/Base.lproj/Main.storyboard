@@ -1,24 +1,809 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="se5-t5-qVp">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="FiraSans-Regular.ttf">
+            <string>FiraSans-Regular</string>
+        </array>
+        <array key="Poppins-Regular.ttf">
+            <string>Poppins-Regular</string>
+        </array>
+    </customFonts>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <!--Onboarding View Controller Main-->
+        <scene sceneID="kMR-Re-yBP">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                <viewController storyboardIdentifier="onbord" id="se5-t5-qVp" customClass="OnboardingViewControllerMain" customModule="MeetSerbia" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="4RC-PP-bSI">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <subviews>
+                            <containerView opaque="NO" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fh7-J3-YGg">
+                                <rect key="frame" x="69" y="169" width="240" height="128"/>
+                                <connections>
+                                    <segue destination="2yL-0O-hmP" kind="embed" id="eUe-Ew-bua"/>
+                                </connections>
+                            </containerView>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hLD-Cw-7k7">
+                                <rect key="frame" x="145" y="777" width="104" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="СЛЕДЕЋЕ">
+                                    <color key="baseBackgroundColor" red="0.068301961999999994" green="0.057544308000000002" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="buttonClicked:" destination="se5-t5-qVp" eventType="touchUpInside" id="suG-L7-GHq"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="DrR-Lz-wbl"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="hLD-Cw-7k7" firstAttribute="top" secondItem="fh7-J3-YGg" secondAttribute="bottom" constant="80" id="g78-In-i1N"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="buttonNext" destination="hLD-Cw-7k7" id="SJW-Gd-MXd"/>
+                        <outlet property="container" destination="fh7-J3-YGg" id="xFK-yC-tEU"/>
+                        <segue destination="wKh-Aa-1O0" kind="show" identifier="toReg" id="FiO-oI-wEw"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Oxt-GL-vzY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2702" y="175"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="z7U-tA-u21">
+            <objects>
+                <viewController modalTransitionStyle="crossDissolve" id="o4l-Hi-4GB" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="kiN-3d-Ndj">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="4mh-hI-sQL"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="ll2-wB-3TE"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mb6-zC-5eM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2309" y="-625"/>
+        </scene>
+        <!--Slide1 View Controller-->
+        <scene sceneID="kmU-kM-ArS">
+            <objects>
+                <viewController storyboardIdentifier="slide1" modalTransitionStyle="flipHorizontal" id="yqx-bN-Ff8" customClass="Slide1ViewController" customModule="MeetSerbia" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="SUQ-dc-efv">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="placeholder_profile" translatesAutoresizingMaskIntoConstraints="NO" id="6js-9R-9ev">
+                                <rect key="frame" x="25" y="87" width="73" height="73"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="73" id="8Gh-7I-wQ9"/>
+                                    <constraint firstAttribute="height" constant="73" id="iUd-M4-inz"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Мишо Вујовић" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0RD-wn-mtp">
+                                <rect key="frame" x="118.00000000000001" y="119" width="128.33333333333337" height="23"/>
+                                <fontDescription key="fontDescription" name="FiraSans-Regular" family="Fira Sans" pointSize="19"/>
+                                <color key="textColor" red="0.068301961999999994" green="0.057544308000000002" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Yq0-Tb-58N">
+                                <rect key="frame" x="10" y="220.33333333333331" width="373" height="587.66666666666674"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <string key="text">Оснивач је Мисије, сада Задужбине Манастира Хиландара у Београду, којом је руководио три године. Такође је оснивач Издавачке куће „Принцип Прес“ и престижног магазина Србија – Национална ревија. Приређивач је капиталних монографија на више светских језика: Туристичка библија Србије, Србија – од злата јабука, Бој изнад векова – стогодишњица Кумановске битке, Србија – друмовима, пругама, рекама и др. Руководилац је више пројеката из области културе, међу којима су значајнији „Србија на међународним сајмовима књига – Лајпциг, Пекинг, Москва, Франкфурт 2019“ као и подухват дигитализације културног наслеђа и савременог стваралаштва „Србија национална ревија — пут у дигитализовани свет културне баштине Србије“.
+</string>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="O АУТОРУ АПЛИКАЦИЈЕ" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wwa-r9-hph">
+                                <rect key="frame" x="20" y="180" width="353" height="20.333333333333343"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.068301961999999994" green="0.057544308000000002" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="VFV-Pe-ANe"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6js-9R-9ev" firstAttribute="leading" secondItem="VFV-Pe-ANe" secondAttribute="leading" constant="25" id="86R-ku-bpV"/>
+                            <constraint firstItem="Yq0-Tb-58N" firstAttribute="leading" secondItem="VFV-Pe-ANe" secondAttribute="leading" constant="10" id="9zJ-aN-n70"/>
+                            <constraint firstItem="VFV-Pe-ANe" firstAttribute="trailing" secondItem="Wwa-r9-hph" secondAttribute="trailing" constant="20" id="Lrs-fT-vKU"/>
+                            <constraint firstItem="VFV-Pe-ANe" firstAttribute="trailing" secondItem="Yq0-Tb-58N" secondAttribute="trailing" constant="10" id="ML5-qy-d4L"/>
+                            <constraint firstItem="Wwa-r9-hph" firstAttribute="top" secondItem="6js-9R-9ev" secondAttribute="bottom" constant="20" id="R7P-Bg-Fzf"/>
+                            <constraint firstItem="0RD-wn-mtp" firstAttribute="leading" secondItem="6js-9R-9ev" secondAttribute="trailing" constant="20" id="VUB-s9-aW2"/>
+                            <constraint firstItem="Wwa-r9-hph" firstAttribute="leading" secondItem="VFV-Pe-ANe" secondAttribute="leading" constant="20" id="YRl-xB-6y5"/>
+                            <constraint firstItem="VFV-Pe-ANe" firstAttribute="bottom" secondItem="Yq0-Tb-58N" secondAttribute="bottom" constant="10" id="acf-GW-wSh"/>
+                            <constraint firstItem="6js-9R-9ev" firstAttribute="top" secondItem="VFV-Pe-ANe" secondAttribute="top" constant="28" id="gqV-jH-loh"/>
+                            <constraint firstItem="Yq0-Tb-58N" firstAttribute="top" secondItem="Wwa-r9-hph" secondAttribute="bottom" constant="20" id="mKr-Xn-pG0"/>
+                            <constraint firstItem="0RD-wn-mtp" firstAttribute="top" secondItem="VFV-Pe-ANe" secondAttribute="top" constant="60" id="w87-HX-aAY"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="tvDesription" destination="Yq0-Tb-58N" id="mia-4v-aOL"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dFz-uF-V9m" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1605.3435114503816" y="-620.42253521126759"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="GK1-Qq-wcA">
+            <objects>
+                <navigationController id="TdI-rM-dlS" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="" image="profile" id="bdD-o0-C7B"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="2yT-53-q1X">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="56"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="EPa-Pc-J4E" kind="relationship" relationship="rootViewController" id="vi0-cO-K5W"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3eQ-yG-3xJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="821" y="954"/>
+        </scene>
+        <!--Onboarding Page1 View Controller-->
+        <scene sceneID="SmH-M5-AeK">
+            <objects>
+                <viewController storyboardIdentifier="OnboardingPage1" id="XOi-jk-7N8" customClass="OnboardingPage1ViewController" customModule="MeetSerbia" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="xfm-Bg-Zdf">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="hqb-Ge-1FW"/>
+                        <color key="backgroundColor" systemColor="systemCyanColor"/>
                     </view>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dFa-uh-K2A" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-4695" y="-506"/>
+        </scene>
+        <!--Register View Controller-->
+        <scene sceneID="No4-t4-lJM">
+            <objects>
+                <viewController storyboardIdentifier="reg" id="wKh-Aa-1O0" customClass="RegisterViewController" customModule="MeetSerbia" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ZDh-Cb-rXb">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="783"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="252" verticalCompressionResistancePriority="751" image="LOGO MEET SERBIA" translatesAutoresizingMaskIntoConstraints="NO" id="FRS-gU-pqN">
+                                <rect key="frame" x="0.0" y="50" width="393" height="241"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="htp-Tk-qXm">
+                                <rect key="frame" x="105" y="587.33333333333337" width="82" height="51"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="82" id="Bc9-IL-gZe"/>
+                                    <constraint firstAttribute="width" constant="82" id="Ggu-uf-TBN"/>
+                                    <constraint firstAttribute="height" constant="51" id="Mxr-W4-7E7"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="flogo"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N1z-49-jiR">
+                                <rect key="frame" x="207" y="587.33333333333337" width="82" height="51"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="51" id="7V0-7f-2gp"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="82" id="EzD-01-BrZ"/>
+                                    <constraint firstAttribute="width" constant="82" id="eEO-Nf-syv"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="golgo" title=""/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lJ5-dX-0UD">
+                                <rect key="frame" x="20" y="658.33333333333337" width="353" height="43"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="43" id="ov6-PC-U4G"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="РЕГИСТРУЈ СЕ!"/>
+                                <connections>
+                                    <action selector="buttonClicked:" destination="wKh-Aa-1O0" eventType="touchUpInside" id="B4X-L3-yv3"/>
+                                </connections>
+                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="57" translatesAutoresizingMaskIntoConstraints="NO" id="DCV-Z4-QWP">
+                                <rect key="frame" x="20" y="351.33333333333331" width="353" height="215.99999999999994"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" verticalHuggingPriority="249" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Име и презиме" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BCm-tA-eiJ">
+                                        <rect key="frame" x="0.0" y="0.0" width="353" height="34"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="34" id="zjx-g9-QhS"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" textContentType="name"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Електронска адреса" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="QHS-HT-zWq">
+                                        <rect key="frame" x="0.0" y="91" width="353" height="34"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="34" id="fkA-0N-yUN"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" textContentType="email"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Лозинка" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XGn-hS-wj4">
+                                        <rect key="frame" x="0.0" y="182.00000000000006" width="353" height="34"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="34" id="xGd-WJ-mAL"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" textContentType="password"/>
+                                    </textField>
+                                </subviews>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="NATURE TRADITION HISTORY" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jm3-Z3-oHI">
+                                <rect key="frame" x="20" y="311" width="353" height="20.333333333333314"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="252" verticalCompressionResistancePriority="749" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z9y-aN-orf">
+                                <rect key="frame" x="20" y="721.33333333333337" width="353" height="31.666666666666629"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Већ сте регистровани? Пријави се!"/>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="fRy-ut-1C9"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="lJ5-dX-0UD" firstAttribute="top" secondItem="htp-Tk-qXm" secondAttribute="bottom" constant="20" id="0Dz-vg-J7i"/>
+                            <constraint firstItem="DCV-Z4-QWP" firstAttribute="top" secondItem="jm3-Z3-oHI" secondAttribute="bottom" constant="20" id="4qk-6r-AkP"/>
+                            <constraint firstItem="DCV-Z4-QWP" firstAttribute="leading" secondItem="fRy-ut-1C9" secondAttribute="leading" constant="20" id="68c-3F-ZA3"/>
+                            <constraint firstItem="fRy-ut-1C9" firstAttribute="trailing" secondItem="lJ5-dX-0UD" secondAttribute="trailing" constant="20" id="BAs-Du-V6I"/>
+                            <constraint firstItem="fRy-ut-1C9" firstAttribute="trailing" secondItem="DCV-Z4-QWP" secondAttribute="trailing" constant="20" id="CFL-3t-xho"/>
+                            <constraint firstItem="fRy-ut-1C9" firstAttribute="trailing" secondItem="Z9y-aN-orf" secondAttribute="trailing" constant="20" id="Cx1-aW-UPs"/>
+                            <constraint firstItem="N1z-49-jiR" firstAttribute="leading" secondItem="htp-Tk-qXm" secondAttribute="trailing" constant="20" id="DOx-im-9Le"/>
+                            <constraint firstAttribute="trailing" secondItem="FRS-gU-pqN" secondAttribute="trailing" id="FFU-BU-8zX"/>
+                            <constraint firstItem="lJ5-dX-0UD" firstAttribute="leading" secondItem="fRy-ut-1C9" secondAttribute="leading" constant="20" id="HeJ-KW-7Kx"/>
+                            <constraint firstItem="FRS-gU-pqN" firstAttribute="leading" secondItem="fRy-ut-1C9" secondAttribute="leading" id="Kx4-zp-7Km"/>
+                            <constraint firstItem="fRy-ut-1C9" firstAttribute="trailing" secondItem="jm3-Z3-oHI" secondAttribute="trailing" constant="20" id="Mwh-Yq-ejX"/>
+                            <constraint firstItem="htp-Tk-qXm" firstAttribute="top" secondItem="DCV-Z4-QWP" secondAttribute="bottom" constant="20" id="PJr-nm-UHf"/>
+                            <constraint firstItem="htp-Tk-qXm" firstAttribute="leading" secondItem="fRy-ut-1C9" secondAttribute="leading" constant="105" id="WrV-dH-me3"/>
+                            <constraint firstItem="lJ5-dX-0UD" firstAttribute="top" secondItem="N1z-49-jiR" secondAttribute="bottom" constant="20" id="Ygn-hp-V8R"/>
+                            <constraint firstItem="jm3-Z3-oHI" firstAttribute="top" secondItem="FRS-gU-pqN" secondAttribute="bottom" constant="20" id="Zy9-8e-X33"/>
+                            <constraint firstItem="jm3-Z3-oHI" firstAttribute="leading" secondItem="fRy-ut-1C9" secondAttribute="leading" constant="20" id="aLn-DF-fbo"/>
+                            <constraint firstItem="fRy-ut-1C9" firstAttribute="bottom" secondItem="Z9y-aN-orf" secondAttribute="bottom" constant="30" id="alR-oq-cn6"/>
+                            <constraint firstItem="N1z-49-jiR" firstAttribute="leading" secondItem="htp-Tk-qXm" secondAttribute="trailing" constant="20" id="bav-rO-iSR"/>
+                            <constraint firstItem="FRS-gU-pqN" firstAttribute="top" secondItem="ZDh-Cb-rXb" secondAttribute="top" constant="50" id="fEy-if-mzw"/>
+                            <constraint firstItem="Z9y-aN-orf" firstAttribute="leading" secondItem="fRy-ut-1C9" secondAttribute="leading" constant="20" id="j6M-aJ-4uK"/>
+                            <constraint firstItem="Z9y-aN-orf" firstAttribute="top" secondItem="lJ5-dX-0UD" secondAttribute="bottom" constant="20" id="nTs-FB-BnD"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="avU-Qf-TAQ"/>
+                    <connections>
+                        <outlet property="emailTextField" destination="QHS-HT-zWq" id="GhJ-tO-ZKd"/>
+                        <outlet property="nameTextField" destination="BCm-tA-eiJ" id="j3V-Ab-Ple"/>
+                        <outlet property="passwordTextField" destination="XGn-hS-wj4" id="nTf-XC-bBb"/>
+                        <segue destination="CIY-fj-zNO" kind="show" identifier="toMain" id="3zO-W2-2lg"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jNM-jh-iRI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1779.3893129770991" y="183.80281690140845"/>
+        </scene>
+        <!--Meet Serbia-->
+        <scene sceneID="I1A-f4-q3C">
+            <objects>
+                <viewController id="Nh0-VK-1o5" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="m81-68-0CR">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="783"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="TOj-7G-KbF"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="" image="bed" id="wgD-LR-yn9"/>
+                    <navigationItem key="navigationItem" title="Meet Serbia" id="UCC-e6-78f"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BZk-oi-gXf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1830" y="1737"/>
+        </scene>
+        <!--Meet Serbia-->
+        <scene sceneID="xcW-gJ-n5f">
+            <objects>
+                <viewController id="OkA-qK-hxt" customClass="TravelViewController" customModule="MeetSerbia" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="JQj-xC-1Le">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="783"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v2n-nN-7Y2">
+                                <rect key="frame" x="165" y="426" width="75" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                <connections>
+                                    <action selector="click:" destination="OkA-qK-hxt" eventType="touchUpInside" id="IqZ-xM-YY7"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Xq4-iK-XJG"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="" image="human" id="JLe-1g-Cu7"/>
+                    <navigationItem key="navigationItem" title="Meet Serbia" id="wqr-qb-XWL"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="d89-Tr-4rn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2651" y="1748"/>
+        </scene>
+        <!--Location Description View Controller-->
+        <scene sceneID="cFQ-g7-5Ix">
+            <objects>
+                <viewController storyboardIdentifier="ldscVC" id="2W6-fu-7tn" customClass="LocationDescriptionViewController" customModule="MeetSerbia" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="lp9-37-BRo">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="xaX-NO-cFi">
+                                <rect key="frame" x="22" y="321.33333333333331" width="348" height="530.66666666666674"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <string key="text">Од првог дашка пролећа, када се благе падине оките белим цветовима висибаба, па до одмакле јесени када се цела природа прелива у тоновима жуте и црвене боје јесењег лишћа, Фрушка гора је веома посећена од стране многих излетника и туриста. Да би се обезбедио пријатан боравак на овој планини, ЈП "Национални парк Фрушка гора" се брине о уређивању излетишта. Излетишта на Фрушкој гори су простори најчешће поред Гребенског пута. Од излетишта која се уређују, значајнија су: Чортановачка шума, Стражилово, Партизански пут, Иришки венац, Хопово, Главица, Поповица, Змајевац, Летенка, Хајдучки брег, Андревље, Тестера, Цигански логор, Лежимир, Рохаљ базе, Липовача и др. На свим овим излетиштима створени су услови за једнодневни боравак у шуми, шумским пропланцима и на ливадама. Излетницима се овде пружа могућност за активан и пасиван одмор. Сва излетишта су посећена током целе године, а најбројнији посетиоци Фрушке горе су деца из целе Србије.
+</string>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="15"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="scrshot_placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="2x2-I0-ChN">
+                                <rect key="frame" x="0.0" y="100.00000000000001" width="393" height="201.33333333333337"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="2x2-I0-ChN" secondAttribute="height" multiplier="527:270" id="FFW-Tb-Cng"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="KSN-Cu-bdQ"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="KSN-Cu-bdQ" firstAttribute="trailing" secondItem="xaX-NO-cFi" secondAttribute="trailing" constant="23" id="0nD-2Q-gk7"/>
+                            <constraint firstItem="2x2-I0-ChN" firstAttribute="top" secondItem="lp9-37-BRo" secondAttribute="top" constant="100" id="3e1-VB-zRW"/>
+                            <constraint firstItem="xaX-NO-cFi" firstAttribute="leading" secondItem="KSN-Cu-bdQ" secondAttribute="leading" constant="22" id="QDc-YX-Vah"/>
+                            <constraint firstItem="2x2-I0-ChN" firstAttribute="leading" secondItem="KSN-Cu-bdQ" secondAttribute="leading" id="XUh-N2-7xT"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="xaX-NO-cFi" secondAttribute="bottom" constant="-34" id="gsI-Q0-TSQ"/>
+                            <constraint firstAttribute="trailing" secondItem="2x2-I0-ChN" secondAttribute="trailing" id="nsw-mA-6qX"/>
+                            <constraint firstItem="xaX-NO-cFi" firstAttribute="top" secondItem="2x2-I0-ChN" secondAttribute="bottom" constant="20" id="swB-sw-pJx"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Vo4-gl-JLe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2680.1526717557249" y="2468.3098591549297"/>
+        </scene>
+        <!--Meet Serbia-->
+        <scene sceneID="pLR-OM-8F7">
+            <objects>
+                <viewController id="dQw-Ml-jYc" customClass="HomePageViewController" customModule="MeetSerbia" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="fh1-kV-KpV">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="783"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="duL-KR-dl1">
+                                <rect key="frame" x="0.0" y="56" width="393" height="713"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="homePageCell" id="jA1-0x-t6o">
+                                        <rect key="frame" x="0.0" y="50" width="393" height="43.666667938232422"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="jA1-0x-t6o" id="hTV-aM-gGb">
+                                            <rect key="frame" x="0.0" y="0.0" width="393" height="43.666667938232422"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="G3l-5A-7Pz"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="G3l-5A-7Pz" firstAttribute="bottom" secondItem="duL-KR-dl1" secondAttribute="bottom" id="dnl-UR-Wmz"/>
+                            <constraint firstItem="G3l-5A-7Pz" firstAttribute="trailing" secondItem="duL-KR-dl1" secondAttribute="trailing" id="t1U-K6-qDN"/>
+                            <constraint firstItem="duL-KR-dl1" firstAttribute="leading" secondItem="G3l-5A-7Pz" secondAttribute="leading" id="tnk-Tk-sTe"/>
+                            <constraint firstItem="duL-KR-dl1" firstAttribute="top" secondItem="G3l-5A-7Pz" secondAttribute="top" id="zte-dO-Of1"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="" image="srb" id="Jn9-vw-HcI"/>
+                    <navigationItem key="navigationItem" title="Meet Serbia" id="h3F-fH-nVW"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="homePageTableView" destination="duL-KR-dl1" id="Asr-rf-d52"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Y2c-aN-NSs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-888" y="1722"/>
+        </scene>
+        <!--Meet Serbia-->
+        <scene sceneID="9cj-68-cLT">
+            <objects>
+                <viewController id="tph-ed-65f" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="UF9-o2-0ma">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="783"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="BJt-OE-btn"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="" image="food" id="kua-C1-em6"/>
+                    <navigationItem key="navigationItem" title="Meet Serbia" id="3Bz-DG-aiR"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Rn6-hK-G9Y" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-10" y="1713"/>
+        </scene>
+        <!--Meet Serbia-->
+        <scene sceneID="Rr1-it-ZvZ">
+            <objects>
+                <viewController id="EPa-Pc-J4E" customClass="ProfileViewController" customModule="MeetSerbia" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8Wz-We-0wL">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="783"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Ob8-RQ-k2G">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="356.66666666666669"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="placeholder_profile" translatesAutoresizingMaskIntoConstraints="NO" id="aUR-7j-UvC">
+                                <rect key="frame" x="116" y="275.33333333333331" width="161" height="148"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="148" id="IfZ-Eq-JmV"/>
+                                    <constraint firstAttribute="width" constant="161" id="x5u-j7-rsp"/>
+                                </constraints>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="kBB-Gs-Y4b">
+                                <rect key="frame" x="10" y="492" width="373" height="247"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sIi-fN-hva">
+                                        <rect key="frame" x="0.0" y="0.0" width="373" height="43"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="43" id="gP2-Bd-g8B"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="УСПОМЕНЕ СА ПОСЕЋЕНИХ ЛОКАЦИЈА">
+                                            <color key="baseBackgroundColor" red="0.068301961999999994" green="0.057544308000000002" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <segue destination="k5w-VW-JuZ" kind="show" id="0oZ-2g-NOv"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3CS-51-8Ct">
+                                        <rect key="frame" x="0.0" y="68" width="373" height="43"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="43" id="2b5-Dy-tiv"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="СМЕШТАЈ И РЕЗЕРВАЦИЈЕ">
+                                            <color key="baseBackgroundColor" red="0.068301961999999994" green="0.057544308000000002" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </buttonConfiguration>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xFH-zm-Wsf">
+                                        <rect key="frame" x="0.0" y="136" width="373" height="43"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="43" id="caU-na-QgI"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="ОБЈАВЕ">
+                                            <color key="baseBackgroundColor" red="0.068301961999999994" green="0.057544308000000002" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </buttonConfiguration>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g2c-XA-Qdu">
+                                        <rect key="frame" x="0.0" y="204" width="373" height="43"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="43" id="m7K-Wq-HPr"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="ЧЛАНАРИНА И ПЛАЋАЊА">
+                                            <color key="baseBackgroundColor" red="0.068301961999999994" green="0.057544308000000002" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </buttonConfiguration>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JWK-fx-yZd">
+                                <rect key="frame" x="118.33333333333333" y="443.33333333333331" width="156.33333333333337" height="28.666666666666686"/>
+                                <string key="text">Мишо Вујовић
+</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <color key="textColor" red="0.068301961999999994" green="0.057544308000000002" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="AQn-d2-kk2"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="AQn-d2-kk2" firstAttribute="trailing" secondItem="kBB-Gs-Y4b" secondAttribute="trailing" constant="10" id="6x1-Hq-t3C"/>
+                            <constraint firstItem="JWK-fx-yZd" firstAttribute="centerX" secondItem="8Wz-We-0wL" secondAttribute="centerX" id="EIY-Mg-gip"/>
+                            <constraint firstItem="JWK-fx-yZd" firstAttribute="top" secondItem="Ob8-RQ-k2G" secondAttribute="bottom" constant="86.666666666666742" id="KYk-PJ-YtD"/>
+                            <constraint firstItem="Ob8-RQ-k2G" firstAttribute="leading" secondItem="AQn-d2-kk2" secondAttribute="leading" id="Q2p-gR-uqe"/>
+                            <constraint firstItem="kBB-Gs-Y4b" firstAttribute="leading" secondItem="AQn-d2-kk2" secondAttribute="leading" constant="10" id="VhW-Vf-TYu"/>
+                            <constraint firstItem="JWK-fx-yZd" firstAttribute="top" secondItem="aUR-7j-UvC" secondAttribute="bottom" constant="20" id="dIg-Ng-Vxn"/>
+                            <constraint firstItem="Ob8-RQ-k2G" firstAttribute="top" secondItem="8Wz-We-0wL" secondAttribute="top" id="n5v-Uz-eas"/>
+                            <constraint firstItem="Ob8-RQ-k2G" firstAttribute="centerX" secondItem="8Wz-We-0wL" secondAttribute="centerX" id="n7T-o1-HYD"/>
+                            <constraint firstItem="AQn-d2-kk2" firstAttribute="trailing" secondItem="Ob8-RQ-k2G" secondAttribute="trailing" id="orl-zY-N1e"/>
+                            <constraint firstItem="aUR-7j-UvC" firstAttribute="centerX" secondItem="8Wz-We-0wL" secondAttribute="centerX" id="pAJ-yK-2xR"/>
+                            <constraint firstItem="AQn-d2-kk2" firstAttribute="bottom" secondItem="kBB-Gs-Y4b" secondAttribute="bottom" constant="30" id="xQm-Tt-0fG"/>
+                            <constraint firstItem="kBB-Gs-Y4b" firstAttribute="top" secondItem="JWK-fx-yZd" secondAttribute="bottom" constant="20" id="ygW-YL-URG"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="" image="profile" id="mTK-p9-otT"/>
+                    <navigationItem key="navigationItem" title="Meet Serbia" id="Jv4-0v-p0Q"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="firstButton" destination="sIi-fN-hva" id="hWl-Vn-dlq"/>
+                        <outlet property="fourthButton" destination="g2c-XA-Qdu" id="fEi-mw-urd"/>
+                        <outlet property="secondButton" destination="3CS-51-8Ct" id="BZf-7P-gnZ"/>
+                        <outlet property="thirdButton" destination="xFH-zm-Wsf" id="mPy-0f-OSl"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lzr-DT-HOQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="825" y="1715"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="OsC-oM-A9W">
+            <objects>
+                <navigationController id="k5w-VW-JuZ" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="GCp-ea-UPK"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="egO-rg-BDy">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="56"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="h9S-fc-cE3" kind="relationship" relationship="rootViewController" id="heT-oX-YFH"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sIJ-U7-03h" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1558" y="1705"/>
+        </scene>
+        <!--Meet Serbia-->
+        <scene sceneID="xhQ-f9-ZsX">
+            <objects>
+                <viewController id="h9S-fc-cE3" customClass="MemmoriesViewController" customModule="MeetSerbia" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="273-4c-jgg">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="783"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="ZFA-sQ-0bA">
+                                <rect key="frame" x="0.0" y="56" width="393" height="634"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="memmoryCell" id="G6J-A1-YHE">
+                                        <rect key="frame" x="0.0" y="50" width="393" height="43.666667938232422"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="G6J-A1-YHE" id="2H2-h4-KYn">
+                                            <rect key="frame" x="0.0" y="0.0" width="393" height="43.666667938232422"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hda-2j-eZR">
+                                <rect key="frame" x="20" y="710" width="353" height="43"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="43" id="BX8-fo-4Z8"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="ДОДАЈ НОВУ УСПОМЕНУ">
+                                    <color key="baseBackgroundColor" red="0.068301961999999994" green="0.057544308000000002" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </buttonConfiguration>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="PKr-eG-Hgc"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Hda-2j-eZR" firstAttribute="leading" secondItem="PKr-eG-Hgc" secondAttribute="leading" constant="20" id="7xO-3Q-4s8"/>
+                            <constraint firstAttribute="bottom" secondItem="Hda-2j-eZR" secondAttribute="bottom" constant="30" id="Brt-8v-fTF"/>
+                            <constraint firstItem="PKr-eG-Hgc" firstAttribute="trailing" secondItem="Hda-2j-eZR" secondAttribute="trailing" constant="20" id="Hzv-4x-IUK"/>
+                            <constraint firstItem="Hda-2j-eZR" firstAttribute="top" secondItem="ZFA-sQ-0bA" secondAttribute="bottom" constant="20" id="cL4-JV-4h2"/>
+                            <constraint firstItem="ZFA-sQ-0bA" firstAttribute="top" secondItem="PKr-eG-Hgc" secondAttribute="top" id="fM1-dG-3ai"/>
+                            <constraint firstItem="PKr-eG-Hgc" firstAttribute="trailing" secondItem="ZFA-sQ-0bA" secondAttribute="trailing" id="hOI-55-P0u"/>
+                            <constraint firstItem="ZFA-sQ-0bA" firstAttribute="leading" secondItem="PKr-eG-Hgc" secondAttribute="leading" id="okH-WH-e2r"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Meet Serbia" id="er1-ZQ-hL7"/>
+                    <connections>
+                        <outlet property="memmoriesTableView" destination="ZFA-sQ-0bA" id="Jr2-Fp-f8G"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3vy-Rk-ayg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2452.6717557251909" y="1694.3661971830986"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="xMa-M1-qsS">
+            <objects>
+                <tabBarController id="CIY-fj-zNO" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="bAv-uW-7WU"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="WcC-EH-dq2">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="nkk-GI-aTO" kind="relationship" relationship="viewControllers" id="uLf-LB-slE"/>
+                        <segue destination="f54-rx-T9U" kind="relationship" relationship="viewControllers" id="O7w-e8-VXO"/>
+                        <segue destination="b27-Ac-sFM" kind="relationship" relationship="viewControllers" id="hHR-ne-bin"/>
+                        <segue destination="iIP-k9-MLy" kind="relationship" relationship="viewControllers" id="DsH-sl-xUw"/>
+                        <segue destination="TdI-rM-dlS" kind="relationship" relationship="viewControllers" id="9x0-OG-lTZ"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="erX-4R-sQK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-891" y="149"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="gic-w7-tP3">
+            <objects>
+                <navigationController id="iIP-k9-MLy" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="" image="food" id="M4E-zZ-p6a"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="jDO-ZS-hv4">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="56"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="tph-ed-65f" kind="relationship" relationship="rootViewController" id="tca-DU-QBH"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9yG-se-jEv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-56" y="959"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="QCc-oj-bmR">
+            <objects>
+                <navigationController id="b27-Ac-sFM" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="" image="srb" springLoaded="YES" id="7lB-XC-rwu"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Xb6-Sx-SUn">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="56"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="dQw-Ml-jYc" kind="relationship" relationship="rootViewController" id="UuK-Yi-M1C"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LzY-nh-QX9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-874" y="961"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="ei8-Am-dlj">
+            <objects>
+                <navigationController id="nkk-GI-aTO" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="" image="human" id="nat-VU-WWd"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="cjs-Vn-NL8">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="56"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="OkA-qK-hxt" kind="relationship" relationship="rootViewController" id="tud-nk-keD"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WWs-ak-skQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2662" y="946"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="iLU-E1-tkx">
+            <objects>
+                <navigationController id="f54-rx-T9U" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="" image="bed" id="toN-3c-UdR"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="5lM-tJ-5TE">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="56"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="Nh0-VK-1o5" kind="relationship" relationship="rootViewController" id="X8T-eQ-BCh"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BQP-K1-cGn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1831" y="965"/>
+        </scene>
+        <!--Slide2 View Controller-->
+        <scene sceneID="pgQ-gx-iLG">
+            <objects>
+                <viewController storyboardIdentifier="slide2" id="crT-aY-i33" customClass="Slide2ViewController" customModule="MeetSerbia" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="FtN-Rn-a4i">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="K4n-XR-9f2">
+                                <rect key="frame" x="0.0" y="212" width="393" height="640"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="f84-ag-iZ1"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="K4n-XR-9f2" firstAttribute="top" secondItem="f84-ag-iZ1" secondAttribute="top" constant="153" id="5Fk-EC-jZ0"/>
+                            <constraint firstItem="K4n-XR-9f2" firstAttribute="leading" secondItem="f84-ag-iZ1" secondAttribute="leading" id="9EL-PW-UzT"/>
+                            <constraint firstAttribute="trailing" secondItem="K4n-XR-9f2" secondAttribute="trailing" id="fBx-cB-O58"/>
+                            <constraint firstAttribute="bottom" secondItem="K4n-XR-9f2" secondAttribute="bottom" id="l2u-eE-2lJ"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="tvDesc" destination="K4n-XR-9f2" id="azO-lr-v0Y"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wBo-6W-aQy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-947.32824427480909" y="-618.30985915492965"/>
+        </scene>
+        <!--Slide3 View Controller-->
+        <scene sceneID="YL9-Qu-Opw">
+            <objects>
+                <viewController storyboardIdentifier="slide3" id="V5p-XQ-nV2" customClass="Slide3ViewController" customModule="MeetSerbia" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="gdQ-2l-OOn">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="A79-S3-jfF">
+                                <rect key="frame" x="0.0" y="212" width="393" height="640"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="3Ul-Vi-inL"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="A79-S3-jfF" firstAttribute="leading" secondItem="gdQ-2l-OOn" secondAttribute="leading" id="8gi-5g-gNr"/>
+                            <constraint firstItem="3Ul-Vi-inL" firstAttribute="trailing" secondItem="A79-S3-jfF" secondAttribute="trailing" id="bzF-NL-IAV"/>
+                            <constraint firstAttribute="bottom" secondItem="A79-S3-jfF" secondAttribute="bottom" id="hIL-dO-6TA"/>
+                            <constraint firstItem="A79-S3-jfF" firstAttribute="top" secondItem="3Ul-Vi-inL" secondAttribute="top" constant="153" id="iom-0S-Kys"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="descTV" destination="A79-S3-jfF" id="YU9-bF-Fsc"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Lje-TQ-Yor" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-271" y="-618"/>
+        </scene>
+        <!--Root View Controller-->
+        <scene sceneID="3Og-c7-Gtd">
+            <objects>
+                <viewController id="2yL-0O-hmP" customClass="RootViewController" customModule="MeetSerbia" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="CTi-7u-74k">
+                        <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="Hbc-Jo-c8F"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="075-KB-hT2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-3037" y="-630"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="LOGO MEET SERBIA" width="231" height="241"/>
+        <image name="bed" width="39" height="23"/>
+        <image name="flogo" width="13" height="25"/>
+        <image name="food" width="39" height="40"/>
+        <image name="golgo" width="24" height="25"/>
+        <image name="human" width="30" height="36"/>
+        <image name="placeholder_profile" width="74" height="74"/>
+        <image name="profile" width="31" height="31"/>
+        <image name="scrshot_placeholder" width="527" height="270"/>
+        <image name="srb" width="37" height="46"/>
+        <systemColor name="labelColor">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemCyanColor">
+            <color red="0.19607843137254902" green="0.67843137254901964" blue="0.90196078431372551" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
 </document>
