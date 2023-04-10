@@ -7,26 +7,66 @@
 
 import Foundation
 import UIKit
+import Firebase
 
 class RegisterViewController:UIViewController{
+    private let refrence = Database.database().reference()
+    private let auth = FirebaseAuth.Auth.auth()
+    private var flag = false
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var emailTextField: UITextField!
+    @IBOutlet weak var googleButton: UIButton!
+    @IBOutlet weak var fbButton: UIButton!
     @IBOutlet weak var passwordTextField: UITextField!
     
+    @IBOutlet weak var buttonMainClicked: UIButton!
+    @IBOutlet weak var regLogLabel: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         uiSetup()
+        self.modalPresentationStyle = .fullScreen
+
     }
     
     private func uiSetup(){
+        regLogLabel.setTitle("Немате налог? Региструј се!", for: .normal)
+        buttonMainClicked.setTitle("ПРИЈАВИ СЕ!", for: .normal)
+        nameTextField.isHidden = true
+        flag = false
+        googleButton.isHidden = true
+        fbButton.isHidden = true
         nameTextField.setupImageRight(image: "checkmark")
         emailTextField.setupImageRight(image: "checkmark")
         passwordTextField.setupImageRightLong(image: "eye")
+        passwordTextField.isSecureTextEntry = true
+      
     }
     
     @IBAction func buttonClicked(_ sender: Any) {
-        performSegue(withIdentifier: "toMain", sender: nil)
+        if flag == false {
+            tryLogin(email: emailTextField!.text!, password: passwordTextField!.text!)
+
+        } else {
+        if checkData(){
+            tryRegister(email: emailTextField!.text!, password: passwordTextField!.text!)
+        } else {
+        }
+        }
+    }
+    @IBAction func regLogClicked(_ sender: Any) {
+        if flag == false {
+            regLogLabel.setTitle("Већ сте регистровани? Пријави се!", for: .normal)
+            buttonMainClicked.setTitle("РЕГИСТРУЈ СЕ!", for: .normal)
+            nameTextField.isHidden = false
+            flag = true
+        } else {
+            regLogLabel.setTitle("Немате налог? Региструј се!", for: .normal)
+            buttonMainClicked.setTitle("ПРИЈАВИ СЕ!", for: .normal)
+            nameTextField.isHidden = true
+            flag = false
+        }
+//Лозинка мора бити дужа од шест карактера.
     }
     
 }
@@ -49,6 +89,49 @@ extension UITextField {
         rightViewMode = .always
         self.tintColor = .lightGray
     }
-    
-    
 }
+extension RegisterViewController {
+    private func checkData() -> Bool {
+        if self.passwordTextField.text != nil && self.passwordTextField.text!.count >= 6 {
+            return true
+        } else {
+            
+            return false
+        }
+    }
+    private func tryRegister(email:String,password:String){
+        Firebase.Auth.auth().createUser(withEmail: email, password: password){[weak self] authResult, error  in
+            if error != nil {
+                self?.showToast(message: "Погрешни креденцијали", font: UIFont.systemFont(ofSize: 12.0))
+                return
+            } else {
+                let uid = authResult?.user.uid
+                var user = ["email":email,"id":uid!,"name":self!.nameTextField.text!]
+                self!.refrence.child("users").child(uid!).child("data").setValue(user)
+                self!.refrence.child("users").child(uid!).child("memories")
+                Firebase.Auth.auth().signIn(withEmail: email, password: password){res,err in
+                    if err != nil {
+                        return }else {
+                            UserDefaults.standard.set(uid!, forKey: "uid")
+                            self!.performSegue(withIdentifier: "toMain", sender: nil)
+                            
+                        }
+                }
+                
+            }
+        }
+    }
+    private func tryLogin(email:String,password:String){
+        Firebase.Auth.auth().signIn(withEmail: email, password: password){res,err in
+            if err != nil {
+                self.showToast(message: "Погрешни креденцијали", font: UIFont.systemFont(ofSize: 12.0))
+                return }else {
+                   
+                    UserDefaults.standard.set( res?.user.uid, forKey: "uid")
+                    self.performSegue(withIdentifier: "toMain", sender: nil)
+                    
+                }
+        }
+    }
+}
+

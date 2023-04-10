@@ -7,6 +7,19 @@ target 'MeetSerbia' do
 
   # Pods for MeetSerbia
 
+	pod 'Firebase/Core'
+	pod 'Firebase/Database'
+	pod 'Firebase/Auth'
+	pod 'Firebase/Storage'
+	pod 'SDWebImage'
+	pod 'Kingfisher', '~> 7.0'
+  	pod 'MapboxMaps', '10.11.1'
+	pod 'MapboxCoreNavigation', '~> 2.11'
+	pod 'MapboxNavigation', '~> 2.11'
+	pod 'MapboxGeocoder.swift', '~> 0.15'	
+  	pod 'MapboxSearchUI', ">= 1.0.0-rc.2", "< 2.0"
+
+
   target 'MeetSerbiaTests' do
     inherit! :search_paths
     # Pods for testing

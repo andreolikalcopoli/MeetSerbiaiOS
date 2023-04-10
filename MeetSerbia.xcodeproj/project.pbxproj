@@ -7,6 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		122C8DC029CD9A0F00FE0FA2 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 122C8DBF29CD9A0F00FE0FA2 /* Data.swift */; };
+		122C8DC229CD9A4800FE0FA2 /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 122C8DC129CD9A4800FE0FA2 /* DataModel.swift */; };
+		122C8DC429CDB01900FE0FA2 /* PaddingLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 122C8DC329CDB01900FE0FA2 /* PaddingLabel.swift */; };
+		122C8DC729CDD82D00FE0FA2 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 122C8DC529CDD82D00FE0FA2 /* TableViewCell.swift */; };
+		122C8DC829CDD82D00FE0FA2 /* TableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 122C8DC629CDD82D00FE0FA2 /* TableViewCell.xib */; };
+		122C8DCD29D1AE5C00FE0FA2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 122C8DCC29D1AE5C00FE0FA2 /* ViewController.swift */; };
+		122C8DCF29D1E3A100FE0FA2 /* VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 122C8DCE29D1E3A100FE0FA2 /* VC.swift */; };
+		122C8DD129D2C6B800FE0FA2 /* RouteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 122C8DD029D2C6B800FE0FA2 /* RouteViewController.swift */; };
+		122CF52B29CC4E5A00808072 /* UI+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 122CF52A29CC4E5A00808072 /* UI+Extensions.swift */; };
+		126523E329BEA63200875A87 /* AddNewMemmoryNavigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 126523E229BEA63100875A87 /* AddNewMemmoryNavigation.swift */; };
+		126523E529BEA68800875A87 /* AddNewMemmoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 126523E429BEA68800875A87 /* AddNewMemmoryViewController.swift */; };
 		1267B4A829B9D0A600154428 /* HomePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1267B4A729B9D0A600154428 /* HomePageViewController.swift */; };
 		1267B4AA29B9D12D00154428 /* TravelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1267B4A929B9D12D00154428 /* TravelViewController.swift */; };
 		1267B4AC29B9D18400154428 /* FoodViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1267B4AB29B9D18400154428 /* FoodViewController.swift */; };
@@ -25,6 +36,11 @@
 		1267B4D229BAA48A00154428 /* Slide2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1267B4D129BAA48A00154428 /* Slide2ViewController.swift */; };
 		1267B4D429BAA4BA00154428 /* Slide3ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1267B4D329BAA4BA00154428 /* Slide3ViewController.swift */; };
 		1267B4D629BAAB2600154428 /* OnboardingViewCoontrollerMain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1267B4D529BAAB2600154428 /* OnboardingViewCoontrollerMain.swift */; };
+		1271D53729E41A1200FFFB53 /* FilteredMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1271D53629E41A1200FFFB53 /* FilteredMapViewController.swift */; };
+		1293715D29C0645200F7BF0F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1293715C29C0645200F7BF0F /* GoogleService-Info.plist */; };
+		129AF73B29C879F600CAA7A9 /* LocationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 129AF73A29C879F600CAA7A9 /* LocationModel.swift */; };
+		129AF73D29C87D4B00CAA7A9 /* CoordinateModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 129AF73C29C87D4B00CAA7A9 /* CoordinateModel.swift */; };
+		12C5E05629C0C23500752C64 /* MemoryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12C5E05529C0C23500752C64 /* MemoryModel.swift */; };
 		12CA918A29B5C894007A322B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12CA918929B5C894007A322B /* AppDelegate.swift */; };
 		12CA918C29B5C894007A322B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12CA918B29B5C894007A322B /* SceneDelegate.swift */; };
 		12CA919129B5C894007A322B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 12CA918F29B5C894007A322B /* Main.storyboard */; };
@@ -59,6 +75,17 @@
 /* Begin PBXFileReference section */
 		0ABB327F20642F326D3D4408 /* Pods-MeetSerbia.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MeetSerbia.release.xcconfig"; path = "Target Support Files/Pods-MeetSerbia/Pods-MeetSerbia.release.xcconfig"; sourceTree = "<group>"; };
 		0B008AE04A57E5B581992261 /* Pods-MeetSerbiaTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MeetSerbiaTests.release.xcconfig"; path = "Target Support Files/Pods-MeetSerbiaTests/Pods-MeetSerbiaTests.release.xcconfig"; sourceTree = "<group>"; };
+		122C8DBF29CD9A0F00FE0FA2 /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
+		122C8DC129CD9A4800FE0FA2 /* DataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataModel.swift; sourceTree = "<group>"; };
+		122C8DC329CDB01900FE0FA2 /* PaddingLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaddingLabel.swift; sourceTree = "<group>"; };
+		122C8DC529CDD82D00FE0FA2 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
+		122C8DC629CDD82D00FE0FA2 /* TableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TableViewCell.xib; sourceTree = "<group>"; };
+		122C8DCC29D1AE5C00FE0FA2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		122C8DCE29D1E3A100FE0FA2 /* VC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VC.swift; sourceTree = "<group>"; };
+		122C8DD029D2C6B800FE0FA2 /* RouteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouteViewController.swift; sourceTree = "<group>"; };
+		122CF52A29CC4E5A00808072 /* UI+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UI+Extensions.swift"; sourceTree = "<group>"; };
+		126523E229BEA63100875A87 /* AddNewMemmoryNavigation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewMemmoryNavigation.swift; sourceTree = "<group>"; };
+		126523E429BEA68800875A87 /* AddNewMemmoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewMemmoryViewController.swift; sourceTree = "<group>"; };
 		1267B4A729B9D0A600154428 /* HomePageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageViewController.swift; sourceTree = "<group>"; };
 		1267B4A929B9D12D00154428 /* TravelViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravelViewController.swift; sourceTree = "<group>"; };
 		1267B4AB29B9D18400154428 /* FoodViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodViewController.swift; sourceTree = "<group>"; };
@@ -82,6 +109,11 @@
 		1267B4D129BAA48A00154428 /* Slide2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Slide2ViewController.swift; sourceTree = "<group>"; };
 		1267B4D329BAA4BA00154428 /* Slide3ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Slide3ViewController.swift; sourceTree = "<group>"; };
 		1267B4D529BAAB2600154428 /* OnboardingViewCoontrollerMain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewCoontrollerMain.swift; sourceTree = "<group>"; };
+		1271D53629E41A1200FFFB53 /* FilteredMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilteredMapViewController.swift; sourceTree = "<group>"; };
+		1293715C29C0645200F7BF0F /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
+		129AF73A29C879F600CAA7A9 /* LocationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationModel.swift; sourceTree = "<group>"; };
+		129AF73C29C87D4B00CAA7A9 /* CoordinateModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinateModel.swift; sourceTree = "<group>"; };
+		12C5E05529C0C23500752C64 /* MemoryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoryModel.swift; sourceTree = "<group>"; };
 		12CA918629B5C894007A322B /* MeetSerbia.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MeetSerbia.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		12CA918929B5C894007A322B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		12CA918B29B5C894007A322B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -132,14 +164,35 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		122CF52929CC4E4B00808072 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				122CF52A29CC4E5A00808072 /* UI+Extensions.swift */,
+				122C8DBF29CD9A0F00FE0FA2 /* Data.swift */,
+				122C8DC329CDB01900FE0FA2 /* PaddingLabel.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		126523E129BEA5A600875A87 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				1267B4C029BA104A00154428 /* MemmoriesViewController.swift */,
+				1267B4AF29B9D26A00154428 /* ProfileViewController.swift */,
+				126523E229BEA63100875A87 /* AddNewMemmoryNavigation.swift */,
+				126523E429BEA68800875A87 /* AddNewMemmoryViewController.swift */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
 		1267B4A629B9D08E00154428 /* TabBar */ = {
 			isa = PBXGroup;
 			children = (
+				129AF73E29C8B73500CAA7A9 /* Travel */,
+				126523E129BEA5A600875A87 /* Profile */,
 				1267B4BF29BA102800154428 /* Home */,
-				1267B4A929B9D12D00154428 /* TravelViewController.swift */,
 				1267B4AB29B9D18400154428 /* FoodViewController.swift */,
 				1267B4AD29B9D20D00154428 /* SleepViewController.swift */,
-				1267B4AF29B9D26A00154428 /* ProfileViewController.swift */,
 			);
 			path = TabBar;
 			sourceTree = "<group>";
@@ -159,6 +212,8 @@
 				1267B4B729B9F6A500154428 /* HomePageTableViewCell.xib */,
 				1267B4BB29BA0D3600154428 /* MemmoryTableViewCell.swift */,
 				1267B4BC29BA0D3600154428 /* MemmoryTableViewCell.xib */,
+				122C8DC529CDD82D00FE0FA2 /* TableViewCell.swift */,
+				122C8DC629CDD82D00FE0FA2 /* TableViewCell.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -167,9 +222,30 @@
 			isa = PBXGroup;
 			children = (
 				1267B4A729B9D0A600154428 /* HomePageViewController.swift */,
-				1267B4C029BA104A00154428 /* MemmoriesViewController.swift */,
+				1271D53629E41A1200FFFB53 /* FilteredMapViewController.swift */,
 			);
 			path = Home;
+			sourceTree = "<group>";
+		};
+		129AF73E29C8B73500CAA7A9 /* Travel */ = {
+			isa = PBXGroup;
+			children = (
+				1267B4C529BA1A6600154428 /* LocationDescriptionViewController.swift */,
+				1267B4A929B9D12D00154428 /* TravelViewController.swift */,
+				122C8DD029D2C6B800FE0FA2 /* RouteViewController.swift */,
+			);
+			path = Travel;
+			sourceTree = "<group>";
+		};
+		12C5E05429C0C21F00752C64 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				12C5E05529C0C23500752C64 /* MemoryModel.swift */,
+				129AF73A29C879F600CAA7A9 /* LocationModel.swift */,
+				129AF73C29C87D4B00CAA7A9 /* CoordinateModel.swift */,
+				122C8DC129CD9A4800FE0FA2 /* DataModel.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		12CA917D29B5C894007A322B = {
@@ -202,6 +278,9 @@
 		12CA918829B5C894007A322B /* MeetSerbia */ = {
 			isa = PBXGroup;
 			children = (
+				122CF52929CC4E4B00808072 /* Helpers */,
+				12C5E05429C0C21F00752C64 /* Models */,
+				1293715C29C0645200F7BF0F /* GoogleService-Info.plist */,
 				1267B4B529B9F67200154428 /* Views */,
 				12CA91BB29B5C9AC007A322B /* ViewControllers */,
 				12CA918929B5C894007A322B /* AppDelegate.swift */,
@@ -210,6 +289,8 @@
 				12CA919229B5C895007A322B /* Assets.xcassets */,
 				12CA919429B5C895007A322B /* LaunchScreen.storyboard */,
 				12CA919729B5C895007A322B /* Info.plist */,
+				122C8DCC29D1AE5C00FE0FA2 /* ViewController.swift */,
+				122C8DCE29D1E3A100FE0FA2 /* VC.swift */,
 			);
 			path = MeetSerbia;
 			sourceTree = "<group>";
@@ -237,7 +318,6 @@
 				1267B4B229B9E4BA00154428 /* Register */,
 				1267B4A629B9D08E00154428 /* TabBar */,
 				12CA91BC29B5C9C6007A322B /* Onboarding */,
-				1267B4C529BA1A6600154428 /* LocationDescriptionViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -290,6 +370,7 @@
 				12CA918229B5C894007A322B /* Sources */,
 				12CA918329B5C894007A322B /* Frameworks */,
 				12CA918429B5C894007A322B /* Resources */,
+				94316D7CEF50ED45DF7F7547 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -327,6 +408,7 @@
 				12CA91A229B5C895007A322B /* Sources */,
 				12CA91A329B5C895007A322B /* Frameworks */,
 				12CA91A429B5C895007A322B /* Resources */,
+				29A92C1DE5C11D1E494024C4 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -388,9 +470,11 @@
 			files = (
 				12CA919629B5C895007A322B /* LaunchScreen.storyboard in Resources */,
 				12CA919329B5C895007A322B /* Assets.xcassets in Resources */,
+				122C8DC829CDD82D00FE0FA2 /* TableViewCell.xib in Resources */,
 				1267B4BE29BA0D3600154428 /* MemmoryTableViewCell.xib in Resources */,
 				12CA919129B5C894007A322B /* Main.storyboard in Resources */,
 				1267B4B929B9F6A500154428 /* HomePageTableViewCell.xib in Resources */,
+				1293715D29C0645200F7BF0F /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -455,6 +539,40 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		29A92C1DE5C11D1E494024C4 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MeetSerbia-MeetSerbiaUITests/Pods-MeetSerbia-MeetSerbiaUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MeetSerbia-MeetSerbiaUITests/Pods-MeetSerbia-MeetSerbiaUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MeetSerbia-MeetSerbiaUITests/Pods-MeetSerbia-MeetSerbiaUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		94316D7CEF50ED45DF7F7547 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MeetSerbia/Pods-MeetSerbia-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MeetSerbia/Pods-MeetSerbia-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MeetSerbia/Pods-MeetSerbia-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		A795901C80030EC46CCF7B4F /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -484,24 +602,38 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				122C8DCD29D1AE5C00FE0FA2 /* ViewController.swift in Sources */,
 				1267B4C629BA1A6600154428 /* LocationDescriptionViewController.swift in Sources */,
+				122C8DD129D2C6B800FE0FA2 /* RouteViewController.swift in Sources */,
 				1267B4BD29BA0D3600154428 /* MemmoryTableViewCell.swift in Sources */,
 				1267B4B429B9E4CD00154428 /* RegisterViewController.swift in Sources */,
+				129AF73B29C879F600CAA7A9 /* LocationModel.swift in Sources */,
+				1271D53729E41A1200FFFB53 /* FilteredMapViewController.swift in Sources */,
 				1267B4A829B9D0A600154428 /* HomePageViewController.swift in Sources */,
 				1267B4B029B9D26A00154428 /* ProfileViewController.swift in Sources */,
+				126523E329BEA63200875A87 /* AddNewMemmoryNavigation.swift in Sources */,
 				1267B4D229BAA48A00154428 /* Slide2ViewController.swift in Sources */,
 				1267B4AC29B9D18400154428 /* FoodViewController.swift in Sources */,
+				129AF73D29C87D4B00CAA7A9 /* CoordinateModel.swift in Sources */,
 				1267B4AA29B9D12D00154428 /* TravelViewController.swift in Sources */,
 				1267B4CC29BA9CCB00154428 /* Slide1ViewController.swift in Sources */,
 				12CA91C029B5E693007A322B /* PageOneVC.swift in Sources */,
+				122CF52B29CC4E5A00808072 /* UI+Extensions.swift in Sources */,
 				1267B4D029BAA27800154428 /* RootViewController.swift in Sources */,
+				122C8DC729CDD82D00FE0FA2 /* TableViewCell.swift in Sources */,
+				122C8DCF29D1E3A100FE0FA2 /* VC.swift in Sources */,
 				1267B4B829B9F6A500154428 /* HomePageTableViewCell.swift in Sources */,
 				12CA918A29B5C894007A322B /* AppDelegate.swift in Sources */,
+				126523E529BEA68800875A87 /* AddNewMemmoryViewController.swift in Sources */,
 				1267B4D429BAA4BA00154428 /* Slide3ViewController.swift in Sources */,
 				1267B4D629BAAB2600154428 /* OnboardingViewCoontrollerMain.swift in Sources */,
+				122C8DC429CDB01900FE0FA2 /* PaddingLabel.swift in Sources */,
+				122C8DC229CD9A4800FE0FA2 /* DataModel.swift in Sources */,
 				1267B4CA29BA997400154428 /* MyPageViewController.swift in Sources */,
+				12C5E05629C0C23500752C64 /* MemoryModel.swift in Sources */,
 				1267B4AE29B9D20D00154428 /* SleepViewController.swift in Sources */,
 				12CA918C29B5C894007A322B /* SceneDelegate.swift in Sources */,
+				122C8DC029CD9A0F00FE0FA2 /* Data.swift in Sources */,
 				1267B4C129BA104A00154428 /* MemmoriesViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -683,6 +815,8 @@
 				DEVELOPMENT_TEAM = 8LWW6684F7;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = MeetSerbia/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "потребан нам је приступ вашој камери да бисте могли да изаберете слике из свог телефона";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "потребан нам је приступ вашој галереији да бисте могли да изаберете слике из свог телефона";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -693,7 +827,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.magma.MeetSerbia;
+				PRODUCT_BUNDLE_IDENTIFIER = com.princippres.meetserbia;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -712,6 +846,8 @@
 				DEVELOPMENT_TEAM = 8LWW6684F7;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = MeetSerbia/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "потребан нам је приступ вашој камери да бисте могли да изаберете слике из свог телефона";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "потребан нам је приступ вашој галереији да бисте могли да изаберете слике из свог телефона";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -722,7 +858,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.magma.MeetSerbia;
+				PRODUCT_BUNDLE_IDENTIFIER = com.princippres.meetserbia;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
