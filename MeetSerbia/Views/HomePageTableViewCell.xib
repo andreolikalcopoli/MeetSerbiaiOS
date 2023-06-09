@@ -6,11 +6,6 @@
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
-    <customFonts key="customFonts">
-        <array key="sf-pro-text-bold.ttf">
-            <string>SFProText-Bold</string>
-        </array>
-    </customFonts>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -20,46 +15,9 @@
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
                 <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                 <autoresizingMask key="autoresizingMask"/>
-                <subviews>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="juf-3z-zVi">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                    </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7uP-Vy-j8H">
-                        <rect key="frame" x="20" y="-47.333333333333336" width="280" height="138.66666666666666"/>
-                        <fontDescription key="fontDescription" name="SFProText-Bold" family="SF Pro Text" pointSize="32"/>
-                        <color key="textColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <nil key="highlightedColor"/>
-                    </label>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="arrow" translatesAutoresizingMaskIntoConstraints="NO" id="0kP-qF-TpO">
-                        <rect key="frame" x="280" y="4" width="20" height="20"/>
-                        <constraints>
-                            <constraint firstAttribute="width" constant="20" id="1Co-ee-hc5"/>
-                            <constraint firstAttribute="height" constant="20" id="K6F-gw-LQB"/>
-                        </constraints>
-                    </imageView>
-                </subviews>
-                <constraints>
-                    <constraint firstItem="juf-3z-zVi" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="1ZC-cc-aRt"/>
-                    <constraint firstAttribute="bottom" secondItem="juf-3z-zVi" secondAttribute="bottom" id="DBe-iR-BkY"/>
-                    <constraint firstItem="7uP-Vy-j8H" firstAttribute="centerY" secondItem="juf-3z-zVi" secondAttribute="centerY" id="OGP-g8-3e6"/>
-                    <constraint firstItem="7uP-Vy-j8H" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="Qgl-JN-J61"/>
-                    <constraint firstAttribute="trailing" secondItem="0kP-qF-TpO" secondAttribute="trailing" constant="20" id="UN7-KI-Eg6"/>
-                    <constraint firstItem="7uP-Vy-j8H" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="-58.333333333333336" id="b3A-iY-d0H"/>
-                    <constraint firstItem="juf-3z-zVi" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="ddw-xj-Z3t"/>
-                    <constraint firstAttribute="bottom" secondItem="0kP-qF-TpO" secondAttribute="bottom" constant="20" id="g5Q-Md-1wX"/>
-                    <constraint firstAttribute="trailing" secondItem="juf-3z-zVi" secondAttribute="trailing" id="ybR-Te-TaL"/>
-                    <constraint firstItem="7uP-Vy-j8H" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="zPk-Rr-mkG"/>
-                </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
-            <connections>
-                <outlet property="selfImage" destination="juf-3z-zVi" id="8Rz-C4-eCZ"/>
-                <outlet property="stringLabel" destination="7uP-Vy-j8H" id="gXf-Sc-f6X"/>
-            </connections>
             <point key="canvasLocation" x="68.702290076335871" y="-11.267605633802818"/>
         </tableViewCell>
     </objects>
-    <resources>
-        <image name="arrow" width="9" height="16"/>
-    </resources>
 </document>

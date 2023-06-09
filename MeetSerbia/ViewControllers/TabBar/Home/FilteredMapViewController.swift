@@ -39,11 +39,19 @@ class FilteredMapViewController:UIViewController,CLLocationManagerDelegate{
         mapView.autoresizingMask = [.flexibleTopMargin, .flexibleHeight]
         mapView.isUserInteractionEnabled = true
         self.view.addSubview(mapView)
+        let bounds = CoordinateBounds(southwest: serbiaSouthWest,
+        northeast: serbiaNorthEast)
+        try? mapView.mapboxMap.setCameraBounds(with: CameraBoundsOptions(bounds: bounds))
+         
+        // Center the camera on the bounds
+        let camera = mapView.mapboxMap.camera(for: bounds, padding: .zero, bearing: 0, pitch: 0)
+         
+        // Set the camera's center coordinate.
+        mapView.mapboxMap.setCamera(to: camera)
         if subCategory == ""{
             getLocations(cat:category)
         } else {
             getLocationsSub(subCat: subCategory)
-
         }
     }
     func getLocations(cat:String) {
@@ -71,7 +79,7 @@ class FilteredMapViewController:UIViewController,CLLocationManagerDelegate{
                 if item.category == cat {
                     let coordinate = CLLocationCoordinate2D(latitude: item.lat, longitude: item.lon)
                     var pointAnnotation = PointAnnotation(coordinate: coordinate)
-                    pointAnnotation.image = .init(image: UIImage(named: "point")!, name: nameLat)
+                    pointAnnotation.image = .init(image: UIImage(named: "poin_1")!, name: nameLat)
                     pointAnnotation.iconAnchor = .bottom
                     let pointAnnotationManager = self?.mapView.annotations.makePointAnnotationManager()
                     pointAnnotationManager!.delegate = self
@@ -126,6 +134,7 @@ extension FilteredMapViewController: AnnotationInteractionDelegate {
                         let DVC  = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "locationDescVC") as? LocationDescriptionViewController
                         DVC?.id = anot.image?.name ?? ""
                         self.navigationController?.pushViewController(DVC!, animated: true)
+           
         }
         
     }

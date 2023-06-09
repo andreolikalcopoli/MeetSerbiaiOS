@@ -37,6 +37,7 @@
 		1267B4D429BAA4BA00154428 /* Slide3ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1267B4D329BAA4BA00154428 /* Slide3ViewController.swift */; };
 		1267B4D629BAAB2600154428 /* OnboardingViewCoontrollerMain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1267B4D529BAAB2600154428 /* OnboardingViewCoontrollerMain.swift */; };
 		1271D53729E41A1200FFFB53 /* FilteredMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1271D53629E41A1200FFFB53 /* FilteredMapViewController.swift */; };
+		1290456B2A331D07007D834E /* logogif.gif in Resources */ = {isa = PBXBuildFile; fileRef = 1290456A2A331D07007D834E /* logogif.gif */; };
 		1293715D29C0645200F7BF0F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1293715C29C0645200F7BF0F /* GoogleService-Info.plist */; };
 		129AF73B29C879F600CAA7A9 /* LocationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 129AF73A29C879F600CAA7A9 /* LocationModel.swift */; };
 		129AF73D29C87D4B00CAA7A9 /* CoordinateModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 129AF73C29C87D4B00CAA7A9 /* CoordinateModel.swift */; };
@@ -50,6 +51,7 @@
 		12CA91AB29B5C895007A322B /* MeetSerbiaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12CA91AA29B5C895007A322B /* MeetSerbiaUITests.swift */; };
 		12CA91AD29B5C895007A322B /* MeetSerbiaUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12CA91AC29B5C895007A322B /* MeetSerbiaUITestsLaunchTests.swift */; };
 		12CA91C029B5E693007A322B /* PageOneVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12CA91BF29B5E693007A322B /* PageOneVC.swift */; };
+		12DCE44729F68D42006FCD29 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12DCE44629F68D42006FCD29 /* Constants.swift */; };
 		9393D9D7C09372664DBB15B9 /* Pods_MeetSerbiaTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BD3ACB5110F7D8557F817D2 /* Pods_MeetSerbiaTests.framework */; };
 		93D29EE26C9530E04304F684 /* Pods_MeetSerbia_MeetSerbiaUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92AEFB46953F23B19CE6F116 /* Pods_MeetSerbia_MeetSerbiaUITests.framework */; };
 		CD33C3AD5D2F4DD045A927A7 /* Pods_MeetSerbia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C40860C4F839F15014A98A6 /* Pods_MeetSerbia.framework */; };
@@ -110,6 +112,7 @@
 		1267B4D329BAA4BA00154428 /* Slide3ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Slide3ViewController.swift; sourceTree = "<group>"; };
 		1267B4D529BAAB2600154428 /* OnboardingViewCoontrollerMain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewCoontrollerMain.swift; sourceTree = "<group>"; };
 		1271D53629E41A1200FFFB53 /* FilteredMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilteredMapViewController.swift; sourceTree = "<group>"; };
+		1290456A2A331D07007D834E /* logogif.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = logogif.gif; sourceTree = SOURCE_ROOT; };
 		1293715C29C0645200F7BF0F /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
 		129AF73A29C879F600CAA7A9 /* LocationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationModel.swift; sourceTree = "<group>"; };
 		129AF73C29C87D4B00CAA7A9 /* CoordinateModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinateModel.swift; sourceTree = "<group>"; };
@@ -127,6 +130,7 @@
 		12CA91AA29B5C895007A322B /* MeetSerbiaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeetSerbiaUITests.swift; sourceTree = "<group>"; };
 		12CA91AC29B5C895007A322B /* MeetSerbiaUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeetSerbiaUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		12CA91BF29B5E693007A322B /* PageOneVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageOneVC.swift; sourceTree = "<group>"; };
+		12DCE44629F68D42006FCD29 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		3BD3ACB5110F7D8557F817D2 /* Pods_MeetSerbiaTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MeetSerbiaTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7C40860C4F839F15014A98A6 /* Pods_MeetSerbia.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MeetSerbia.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7DD41A44D4E6B71E9E95A60A /* Pods-MeetSerbia-MeetSerbiaUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MeetSerbia-MeetSerbiaUITests.debug.xcconfig"; path = "Target Support Files/Pods-MeetSerbia-MeetSerbiaUITests/Pods-MeetSerbia-MeetSerbiaUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -170,6 +174,7 @@
 				122CF52A29CC4E5A00808072 /* UI+Extensions.swift */,
 				122C8DBF29CD9A0F00FE0FA2 /* Data.swift */,
 				122C8DC329CDB01900FE0FA2 /* PaddingLabel.swift */,
+				12DCE44629F68D42006FCD29 /* Constants.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -227,6 +232,14 @@
 			path = Home;
 			sourceTree = "<group>";
 		};
+		129045692A331CF6007D834E /* gif */ = {
+			isa = PBXGroup;
+			children = (
+				1290456A2A331D07007D834E /* logogif.gif */,
+			);
+			path = gif;
+			sourceTree = "<group>";
+		};
 		129AF73E29C8B73500CAA7A9 /* Travel */ = {
 			isa = PBXGroup;
 			children = (
@@ -278,6 +291,7 @@
 		12CA918829B5C894007A322B /* MeetSerbia */ = {
 			isa = PBXGroup;
 			children = (
+				129045692A331CF6007D834E /* gif */,
 				122CF52929CC4E4B00808072 /* Helpers */,
 				12C5E05429C0C21F00752C64 /* Models */,
 				1293715C29C0645200F7BF0F /* GoogleService-Info.plist */,
@@ -474,6 +488,7 @@
 				1267B4BE29BA0D3600154428 /* MemmoryTableViewCell.xib in Resources */,
 				12CA919129B5C894007A322B /* Main.storyboard in Resources */,
 				1267B4B929B9F6A500154428 /* HomePageTableViewCell.xib in Resources */,
+				1290456B2A331D07007D834E /* logogif.gif in Resources */,
 				1293715D29C0645200F7BF0F /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -621,6 +636,7 @@
 				122CF52B29CC4E5A00808072 /* UI+Extensions.swift in Sources */,
 				1267B4D029BAA27800154428 /* RootViewController.swift in Sources */,
 				122C8DC729CDD82D00FE0FA2 /* TableViewCell.swift in Sources */,
+				12DCE44729F68D42006FCD29 /* Constants.swift in Sources */,
 				122C8DCF29D1E3A100FE0FA2 /* VC.swift in Sources */,
 				1267B4B829B9F6A500154428 /* HomePageTableViewCell.swift in Sources */,
 				12CA918A29B5C894007A322B /* AppDelegate.swift in Sources */,

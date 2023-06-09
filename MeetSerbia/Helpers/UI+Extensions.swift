@@ -25,4 +25,6 @@ func showToast(message : String, font: UIFont) {
     }, completion: {(isCompleted) in
         toastLabel.removeFromSuperview()
     })
-} }
+}
+    
+}

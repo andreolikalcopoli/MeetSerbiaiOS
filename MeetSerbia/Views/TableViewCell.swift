@@ -15,7 +15,9 @@ class TableViewCell: UITableViewCell,UITableViewDelegate, UITableViewDataSource 
     @IBOutlet weak var holderTView: UITableView!
     @IBOutlet weak var testLabel: UILabel!
     var data = [String]()
+    
     var imageData = [String]()
+    var allData = [DataModel]()
     var vc = UIViewController()
     
     override func awakeFromNib() {
@@ -25,6 +27,7 @@ class TableViewCell: UITableViewCell,UITableViewDelegate, UITableViewDataSource 
         holderTView.delegate = self
         holderTView.dataSource = self
         holderTView.register(UINib(nibName: "HomePageTableViewCell", bundle: nil), forCellReuseIdentifier: "homePageCell")
+        holderTView.reloadData()
      }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return data.count
@@ -32,7 +35,7 @@ class TableViewCell: UITableViewCell,UITableViewDelegate, UITableViewDataSource 
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = holderTView.dequeueReusableCell(withIdentifier: "homePageCell", for: indexPath) as! HomePageTableViewCell
-        cell.textLabel?.text = data[indexPath.row]
+        cell.textLabel?.text = data[indexPath.row].uppercased()
         cell.textLabel?.font = UIFont(name:"Arial",size: 32)
         cell.textLabel?.textColor = .white
         cell.selectionStyle = .none
@@ -53,7 +56,9 @@ class TableViewCell: UITableViewCell,UITableViewDelegate, UITableViewDataSource 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let viewController =  UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "FMT") as? FilteredMapViewController
         viewController?.subCategory = data[indexPath.row]
+        vc.dismiss(animated: true)
         vc.navigationController?.pushViewController(viewController!, animated: true)
+      
     }
    
 }

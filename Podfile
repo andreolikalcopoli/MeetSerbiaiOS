@@ -18,7 +18,7 @@ target 'MeetSerbia' do
 	pod 'MapboxNavigation', '~> 2.11'
 	pod 'MapboxGeocoder.swift', '~> 0.15'	
   	pod 'MapboxSearchUI', ">= 1.0.0-rc.2", "< 2.0"
-
+	pod 'SwiftyGif'
 
   target 'MeetSerbiaTests' do
     inherit! :search_paths

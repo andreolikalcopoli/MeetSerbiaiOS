@@ -21,7 +21,7 @@ class RegisterViewController:UIViewController{
     
     @IBOutlet weak var buttonMainClicked: UIButton!
     @IBOutlet weak var regLogLabel: UIButton!
-    
+    var secured = true
     override func viewDidLoad() {
         super.viewDidLoad()
         uiSetup()
@@ -40,7 +40,8 @@ class RegisterViewController:UIViewController{
         emailTextField.setupImageRight(image: "checkmark")
         passwordTextField.setupImageRightLong(image: "eye")
         passwordTextField.isSecureTextEntry = true
-      
+        passwordTextField.rightView?.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(secureText)))
+        
     }
     
     @IBAction func buttonClicked(_ sender: Any) {
@@ -66,11 +67,24 @@ class RegisterViewController:UIViewController{
             nameTextField.isHidden = true
             flag = false
         }
-//Лозинка мора бити дужа од шест карактера.
     }
-    
+    @objc func secureText(){
+        if secured {
+            passwordTextField.isSecureTextEntry = false
+            passwordTextField.setupImageRightLong(image: "eyeslash")
+            passwordTextField.rightView?.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(secureText)))
+
+            } else {
+                passwordTextField.setupImageRightLong(image: "eye")
+                passwordTextField.isSecureTextEntry = true
+                passwordTextField.rightView?.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(secureText)))
+
+            }
+        secured = !secured
+    }
 }
 extension UITextField {
+ 
     func setupImageRight(image:String){
         let imageView = UIImageView(frame: CGRect(x: 10, y: 10, width: 20, height: 20))
         imageView.image = UIImage(named: image)
@@ -87,8 +101,10 @@ extension UITextField {
         container.addSubview(imageView)
         rightView = container
         rightViewMode = .always
+      
         self.tintColor = .lightGray
     }
+    
 }
 extension RegisterViewController {
     private func checkData() -> Bool {
@@ -111,10 +127,13 @@ extension RegisterViewController {
                 self!.refrence.child("users").child(uid!).child("memories")
                 Firebase.Auth.auth().signIn(withEmail: email, password: password){res,err in
                     if err != nil {
-                        return }else {
+                        return }
+                    else {
                             UserDefaults.standard.set(uid!, forKey: "uid")
-                            self!.performSegue(withIdentifier: "toMain", sender: nil)
+                            UserDefaults.standard.set(true, forKey: "logedIn")
                             
+                            self!.performSegue(withIdentifier: "toMain", sender: nil)
+                    
                         }
                 }
                 
@@ -128,6 +147,8 @@ extension RegisterViewController {
                 return }else {
                    
                     UserDefaults.standard.set( res?.user.uid, forKey: "uid")
+                    UserDefaults.standard.set(true, forKey: "logedIn")
+                    
                     self.performSegue(withIdentifier: "toMain", sender: nil)
                     
                 }

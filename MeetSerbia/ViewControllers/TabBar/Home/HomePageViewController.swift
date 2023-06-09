@@ -10,7 +10,6 @@ import UIKit
 class HomePageViewController:UIViewController,UITableViewDelegate,UITableViewDataSource{
     
     
-    
     var isExpanded: [Bool] = [Bool](repeating: false, count: 12)
     var itemsArray = [DataModel]()
   
@@ -19,9 +18,28 @@ class HomePageViewController:UIViewController,UITableViewDelegate,UITableViewDat
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        initSetup()
+        if logedInCheck() == true{
+            initSetup()
+        } else {
+            let onboardingController =  UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "onbord") as? OnboardingViewControllerMain
+            self.dismiss(animated: true)
+            onboardingController?.modalPresentationStyle = .fullScreen
+            present(onboardingController!, animated: true, completion: nil)
+        }
         
     }
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        isExpanded = [Bool](repeating: false, count: 12)
+        homePageTableView.reloadData()
+    }
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        homePageTableView.reloadData()
+    
+    }
+ 
+
     private func initSetup(){
         getData()
         homePageTableView.dataSource = self
@@ -35,13 +53,30 @@ class HomePageViewController:UIViewController,UITableViewDelegate,UITableViewDat
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = homePageTableView.dequeueReusableCell(withIdentifier: "cell") as? TableViewCell
-        cell?.imageHolder.image = UIImage(named: itemsArray[indexPath.row].categoryImageData) 
-        cell?.testLabel.text = itemsArray[indexPath.row].category
+        
+        if Constants().userDefKey == "cir" {
+            cell?.testLabel.text = itemsArray[indexPath.row].category.uppercased()
+            cell?.data = itemsArray[indexPath.row].subcategory
+        } else if Constants().userDefKey == "lat" {
+            cell?.testLabel.text = itemsArray[indexPath.row].categoryLat.uppercased()
+            cell?.data = itemsArray[indexPath.row].subcategoryLat
+        } else if Constants().userDefKey == "eng" {
+            cell?.testLabel.text = itemsArray[indexPath.row].categoryEng.uppercased()
+            cell?.data = itemsArray[indexPath.row].subcategoryEng
+        }else {
+            cell?.testLabel.text = itemsArray[indexPath.row].category.uppercased()
+            cell?.data = itemsArray[indexPath.row].subcategory
+        }
+        cell?.imageHolder.image = UIImage(named: itemsArray[indexPath.row].categoryImageData)
+        
+
+        
         cell?.vc = self
+        cell?.allData = itemsArray
         cell?.holderTView.isHidden = !itemsArray[indexPath.row].expanded
         cell?.hidencell.text = itemsArray[indexPath.row].categoryLat
         cell?.selectionStyle = .none
-        cell?.data = itemsArray[indexPath.row].subcategory
+        
         cell?.imageData = itemsArray[indexPath.row].imageData
         return cell!
     }
@@ -87,8 +122,10 @@ class HomePageViewController:UIViewController,UITableViewDelegate,UITableViewDat
         selectedCell.holderTView.reloadData()
         if selectedCell.holderTView.isHidden == true {
             selectedCell.holderTView.isHidden = false
+          
         } else {
             selectedCell.holderTView.isHidden = true
+
         }
             
             if isExpanded[indexPath.row] {
@@ -99,8 +136,16 @@ class HomePageViewController:UIViewController,UITableViewDelegate,UITableViewDat
         if(indexPath.row == 1 || indexPath.row == 2 || indexPath.row == 7){
             let viewController =  UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "FMT") as? FilteredMapViewController
             viewController?.category = selectedCell.hidencell.text!
+            self.dismiss(animated: true)
             navigationController?.pushViewController(viewController!, animated: true)
         }
     }
-
+    private func logedInCheck()->Bool {
+        if Constants().userDefLoginKey == true {
+            return true
+        } else {
+            return false
+        }
+    }
+    
 }

@@ -11,8 +11,8 @@ class Data {
     var items = [
         DataModel(
             category: "ПРИРОДА",
-            categoryEng: "Nature",
-            categoryLat: "Priroda",
+            categoryEng: "NATURE",
+            categoryLat: "PRIRODA",
             subcategory: [
                 " Аде",
                 " Водопади",
@@ -24,8 +24,30 @@ class Data {
                 " Планине",
                 " Реке",
             ],
+            subcategotyLat: [
+                "ADE",
+                "VODOPADI",
+                "Zaštićena područja",
+                "Izletišta i vidikovci",
+                "Jezera",
+                "Klisure",
+                "Pećine",
+                "Planine",
+                "Reke"
+            ],
+            subcategoryEng: [
+                "Ade",
+                "Waterfalls",
+                "Protected areas",
+                "Excursions and viewpoints",
+                "Lakes",
+                "Gorges",
+                "Caves",
+                "Mountains",
+                "Rivers"
+            ],
             expanded: false,
-            categoryImageData: "nature",
+            categoryImageData: "nature 1",
             imageData: [
                 "nature1",
                 "nature2",
@@ -43,18 +65,22 @@ class Data {
             categoryEng: "Spa",
             categoryLat: "Banje",
             subcategory: [""],
+            subcategotyLat: [""],
+            subcategoryEng: [""],
             expanded :false,
             categoryImageData: "spa",
-            imageData: []
+            imageData: [""]
         ),
         DataModel(
             category: "ГРАДОВИ",
             categoryEng: "Cities",
             categoryLat: "Gradovi",
             subcategory: [""],
+            subcategotyLat: [""],
+            subcategoryEng: [""],
             expanded :false,
             categoryImageData: "cities",
-            imageData: []
+            imageData: [""]
         ),
         DataModel(
             category: "ГРАЂЕВИНЕ",
@@ -70,6 +96,28 @@ class Data {
                 " Тврђаве",
                 " Торњеви",
                 " Храмови"
+            ],
+            subcategotyLat: [
+                "Brane i hidroelektrane",
+                "Dvorci i vile",
+                "Mostovi",
+                "Narodno graditeljstvo",
+                "Palate",
+                "Spomen-kuće",
+                "Tvrđave",
+                "Tornjevi",
+                "Hramovi"
+            ],
+            subcategoryEng: [
+                "Dams and hydropower plants",
+                "Castles and Villas",
+                "Bridges",
+                "National Construction",
+                "Palaces",
+                "Memorial House",
+                "Fortresses",
+                "Towers",
+                "Temples"
             ],
             expanded :false,
             categoryImageData: "buildings",
@@ -91,6 +139,28 @@ class Data {
                 " Сусрети ",
                 " Целине "
             ],
+            subcategotyLat: [
+                "Biblioteke",
+                "Bioskopi",
+                "Galerije",
+                "Istraživački centri",
+                "Kulturni centri",
+                "Muzeji i zbirke",
+                "Pozorišta",
+                "Spomenici",
+                "Susreti ",
+                "Celine"],
+            subcategoryEng: [
+                "Libraries",
+                "Cinemas",
+                "Galleries",
+                "Research Centers",
+                "Cultural Centers",
+                "Museums and collections",
+                "Theatres",
+                "Monuments",
+                "Encounters",
+                "Entireties"],
             expanded :false,
             categoryImageData: "culture",
             imageData: [
@@ -107,7 +177,7 @@ class Data {
         ),
         DataModel(
             category: "ЗАНИМЉИВОСТИ",
-            categoryEng: "Interestgin",
+            categoryEng: "Interesting",
             categoryLat: "Zanimljivosti",
             subcategory: [
                 " Аква-паркови",
@@ -118,6 +188,22 @@ class Data {
                 " Регате и крстарења",
                 " Скеле"
             ],
+            subcategotyLat: [
+                "Akva-parkovi",
+                "Gondole",
+                "Zoo-vrtovi",
+                "Manifestacije",
+                "Prirodnjački centri",
+                "Regate i krstarenja",
+                "Skele"],
+            subcategoryEng: [
+                "Aqua parks",
+                "Gondola",
+                "Zoos",
+                "Manifestations",
+                "Nature Centers",
+                "Regattas and Cruises",
+                "Scaffolding"],
             expanded :false,
             categoryImageData: "interesting",
             imageData: [
@@ -147,6 +233,34 @@ class Data {
                 " Стазе" ,
                 " Хиподроми"
             ],
+            subcategotyLat: [
+                "Adrenalinski",
+                "Bazeni",
+                "Dvorane",
+                "Kupališta",
+                "Lovišta",
+                "Ribolov",
+                "Skijališta",
+                "Sportovi na vodi",
+                "Sportski centri",
+                "Stadioni",
+                "Staze" ,
+                "Hipodromi"
+            ],
+            subcategoryEng: [
+                "adrenaline",
+                "Pools",
+                "Halls",
+                "Bathrooms",
+                "Hunting",
+                "Fishing",
+                "Ski Resorts",
+                "Water sports",
+                "Sports Centers",
+                "Stadiums",
+                "Tracks",
+                "hippodromes"
+            ],
             expanded :false,
             categoryImageData: "sport",
             imageData: [
@@ -168,8 +282,9 @@ class Data {
             category: "ТУРИСТ-ИНФО ЦЕНТРИ",
             categoryEng: "Tourist-info centers",
             categoryLat: "Turist-info Centri",
-            subcategory: [""
-                         ],
+            subcategory: [""],
+            subcategotyLat: [""],
+            subcategoryEng: [""],
             expanded :false,
             categoryImageData: "touristcenters",
             imageData: []
@@ -185,6 +300,22 @@ class Data {
                 " Собе и апартмани",
                 " Хостели",
                 " Хотели"
+            ],
+            subcategotyLat: [
+                "Domaćinstva i etno-sela",
+                "Kampovi",
+                "Planinarski domovi i odmarališta",
+                "Sobe i apartmani",
+                "Hosteli",
+                "Hoteli"
+            ],
+            subcategoryEng: [
+                "Households and ethno-villages",
+                "Camps",
+                "Mountain homes and resorts",
+                "Rooms and apartments",
+                "Hostels",
+                "hotels"
             ],
             expanded :false,
             categoryImageData: "stay",
@@ -208,6 +339,20 @@ class Data {
                 " Ресторани (Сви. Општи, национални, пицерије, кафане",
                 " Салаши и етно-куће"
             ],
+            subcategotyLat: [
+                "Barovi, pabovi, klubovi",
+                "Vinarije",
+                "Kafei i poslastičarnice",
+                "Restorani (Svi. Opšti, nacionalni, picerije, kafane",
+                "Salaši i etno-kuće"
+            ],
+            subcategoryEng: [
+                "Bars, pubs, clubs",
+                "Wineries",
+                "Cafes and pastry shops",
+                "Restaurants (All. General, national, pizzerias, cafes)",
+                "Farmhouses and ethno-houses"
+            ],
             expanded :false,
             categoryImageData: "catering",
             imageData: [
@@ -216,7 +361,7 @@ class Data {
                 "caffes",
                 "restaurants",
                 "farms",
-                ]
+            ]
         ),
         DataModel(
             category: "ШОПИНГ",
@@ -227,12 +372,22 @@ class Data {
                 " Тржни центри",
                 " Шопинг зоне"
             ],
+            subcategotyLat: [
+                "Pijace",
+                "Tržni centri",
+                "Šoping zone"
+            ],
+            subcategoryEng: [
+                "Markets",
+                "Shopping centers",
+                "Shopping Zones"
+            ],
             expanded :false,
             categoryImageData: "shopping",
             imageData: [
                 "markets",
-            "shoppingcenters",
-            "shoppingzones"]
+                "shoppingcenters",
+                "shoppingzones"]
         ),
         DataModel(
             category: "КОРИСНЕ ИНФОРМАЦИЈЕ",
@@ -254,23 +409,55 @@ class Data {
                 " Путовања",
                 " Такси"
             ],
+            subcategotyLat: [
+                "Apoteke",
+                "Banke",
+                "Vizni režim",
+                "Gorivo",
+                "Zdravlje",
+                "Menjačnice",
+                "Mobilna telefonija",
+                "Osiguranje",
+                "Parking",
+                "Policija",
+                "Pomoć na putu",
+                "Praznici i neradni dani",
+                "Putovanja",
+                "Taksi"
+            ],
+            subcategoryEng: [
+                "Pharmacy",
+                "Banks",
+                "Visa Regime",
+                "Fuel",
+                "Health",
+                "Exchanges",
+                "Mobile telephony",
+                "Insurance",
+                "Parking lot",
+                "Police",
+                "Help on the way",
+                "Holidays and non-working days",
+                "Travels",
+                "Taxi"
+            ],
             expanded :false,
             categoryImageData: "usefulinfo",
             imageData: [
-            "pharmacy",
-            "banks",
-            "regime",
-            "fuel",
-            "health",
-            "exchange",
-            "mobile",
-            "insurance",
-            "parking",
-            "police",
-            "roadhelp",
-            "holidays",
-            "travel",
-            "taxi"
+                "pharmacy",
+                "banks",
+                "regime",
+                "fuel",
+                "health",
+                "exchange",
+                "mobile",
+                "insurance",
+                "parking",
+                "police",
+                "roadhelp",
+                "holidays",
+                "travel",
+                "taxi"
             ]
         )
     ]

@@ -11,73 +11,140 @@ import MapboxMaps
 import MapboxCoreNavigation
 import MapboxNavigation
 import MapboxDirections
+import Firebase
+import MapboxDirections
+import FirebaseDatabase
+import MapboxSearch
+import MapboxSearchUI
 
 class RouteViewController: UIViewController, AnnotationInteractionDelegate {
+    @IBOutlet weak var holderView: UIView!
+    @IBOutlet weak var holderImageView: UIImageView!
+    @IBOutlet weak var holderLabel: UILabel!
+    private var panelController : MapboxPanelController?
+    private var isCurrentSearch  = true
+    private var heighConstraint = 80
+    @IBOutlet weak var testButtonjff: UIButton!
+    let textFieldCurrent = UITextField()
+    let textFieldSelected = UITextField()
+    let responseLabel = UILabel()
     var navigationMapView: NavigationMapView!
+    
     var routeOptions: NavigationRouteOptions?
     var routeResponse: RouteResponse?
     var destionation:CLLocationCoordinate2D?
     var currentLocation: CLLocationCoordinate2D?
     var beginAnnotation: PointAnnotation?
-    var cName :String?
-    var locname:String?
-    let textFieldCurrent = UITextField()
-    let textFieldSelected = UITextField()
-    let responseLabel = UILabel()
-
+    var selectedAnnotation: PointAnnotation?
+    var currentLocationName :String?
+    var destinationName:String?
+    private let refrence = Database.database().reference()
+    let padding = 0.020000
+    var annotationsRig = [PointAnnotation]()
+    var waypointsArray = [Waypoint]()
+    var addedWaypointsArray = [Waypoint]()
+    var waypointsNamesAndImagesarray = [String:UIImage]()
+    private let storageRef = Storage.storage().reference().child("/images/locations")
+    private let searchEngine = SearchEngine()
+    let searchController = MapboxSearchController()
+   
+ 
     override func viewDidLoad() {
         super.viewDidLoad()
+        displayViews()
+        searchControllerSetup()
+        getAnotationsInBounds()
+        getAnotationsInBounds()
+        navigationSetup()
+        searchController.delegate = self
+
+    }
+    
+    // Search Controller Setup
+    
+    private func searchControllerSetup(){
+        var searchOptions = SearchOptions()
+        searchOptions.countries = ["rs"]
+        searchOptions.boundingBox = BoundingBox(Constants().serbiaSouthWest, Constants().serbiaNorthEast)
+        searchController.searchOptions = searchOptions
+        searchController.searchBarPlaceholder = "унесите жељену локацију"
+        searchController.categorySearchOptions?.limit = 0
+        searchController.categorySearchOptions?.countries = ["rs"]
+        searchController.configuration.hideCategorySlots = true
+        textFieldCurrent.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(currentDestinationTextFieldTapped)))
+        textFieldSelected.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(selectedDestinationTextFieldTapped)))
+    }
+    //Tap Gesture Recognizers
+    
+    @objc func selectedDestinationTextFieldTapped(){
+        panelController?.view.isHidden = false
+        textFieldSelected.isHidden = true
+        isCurrentSearch = false
+        let panelViewConstraints = [
+            panelController!.view.heightAnchor.constraint(equalToConstant: 50),
+            panelController!.view.leadingAnchor.constraint(equalTo: view.layoutMarginsGuide.leadingAnchor,constant: 25),
+            panelController!.view.trailingAnchor.constraint(equalTo: view.layoutMarginsGuide.trailingAnchor,constant:  -25),
+            panelController!.view.bottomAnchor.constraint(equalTo: view.layoutMarginsGuide.bottomAnchor,constant: -300),
+            panelController!.view.topAnchor.constraint(equalTo: view.layoutMarginsGuide.topAnchor, constant: CGFloat(80))
+             ]
+        NSLayoutConstraint.activate(panelViewConstraints)
         
+       
+     
+    }
+    @objc func currentDestinationTextFieldTapped(){
+        // plavi tekst fild
+        isCurrentSearch = true
+        panelController?.view.isHidden = false
+        textFieldSelected.isHidden = true
+        textFieldCurrent.isHidden = true
+        let panelViewConstraints = [
+            panelController!.view.heightAnchor.constraint(equalToConstant: 50),
+            panelController!.view.leadingAnchor.constraint(equalTo: view.layoutMarginsGuide.leadingAnchor,constant: 25),
+            panelController!.view.trailingAnchor.constraint(equalTo: view.layoutMarginsGuide.trailingAnchor,constant:  -25),
+            panelController!.view.bottomAnchor.constraint(equalTo: view.layoutMarginsGuide.bottomAnchor,constant: -300),
+            panelController!.view.topAnchor.constraint(equalTo: view.layoutMarginsGuide.topAnchor, constant: CGFloat(20))
+             ]
+        NSLayoutConstraint.activate(panelViewConstraints)
+        
+    }
+    
+    // Display Views
+    
+    private func displayViews(){
         navigationMapView = NavigationMapView(frame: view.bounds)
+        panelController = MapboxPanelController(rootViewController: searchController)
         view.addSubview(navigationMapView)
         view.addSubview(textFieldCurrent)
         view.addSubview(textFieldSelected)
         view.bringSubviewToFront(textFieldCurrent)
-        // Set the annotation manager's delegate
+        view.bringSubviewToFront(holderView)
+        view.bringSubviewToFront(testButtonjff)
+        addChild(panelController!)
+        panelController?.view.alpha = 0.9
+        panelController?.view.isHidden = true
+        holderView.isHidden = true
+      
+     
+        
+       
+    
+    }
+    private func navigationSetup(){
         navigationMapView.mapView.mapboxMap.onNext(event: .mapLoaded) { [weak self] _ in
             guard let self = self else { return }
             self.navigationMapView.pointAnnotationManager?.delegate = self
         }
-        
-        // Configure how map displays the user's location
+ 
         navigationMapView.userLocationStyle = .puck2D()
-        // Switch viewport datasource to track `raw` location updates instead of `passive` mode.
-        navigationMapView.navigationCamera.viewportDataSource = NavigationViewportDataSource(navigationMapView.mapView, viewportDataSourceType: .raw)
+        navigationMapView.navigationCamera.viewportDataSource = NavigationViewportDataSource(navigationMapView.mapView, viewportDataSourceType: .active)
         
-        
-        // Add a gesture recognizer to the map view
-        let longPress = UILongPressGestureRecognizer(target: self, action: #selector(didLongPress(_:)))
-        navigationMapView.addGestureRecognizer(longPress)
-       calculateRoute(from: currentLocation!, to: destionation!)
     }
     
-    @objc func didLongPress(_ sender: UILongPressGestureRecognizer) {
-        guard sender.state == .began else { return }
+    func calculateNewRoute(pointes:[Waypoint]) {
         
-        // Converts point where user did a long press to map coordinates
-        let point = sender.location(in: navigationMapView)
+        let routeOptions = NavigationRouteOptions(waypoints: pointes, profileIdentifier: .automobileAvoidingTraffic)
         
-        let coordinate = navigationMapView.mapView.mapboxMap.coordinate(for: point)
-        
-        if let origin = navigationMapView.mapView.location.latestLocation?.coordinate {
-            // Calculate the route from the user's location to the set destination
-            calculateRoute(from: origin, to: coordinate)
-       
-        } else {
-            print("Failed to get user location, make sure to allow location access for this application.")
-        }
-    }
-    
-    // Calculate route to be used for navigation
-    func calculateRoute(from origin: CLLocationCoordinate2D, to destination: CLLocationCoordinate2D) {
-        // Coordinate accuracy is how close the route must come to the waypoint in order to be considered viable. It is measured in meters. A negative value indicates that the route is viable regardless of how far the route is from the waypoint.
-        let origin = Waypoint(coordinate: origin, coordinateAccuracy: -1, name: "Започни")
-        let destination = Waypoint(coordinate: destination, coordinateAccuracy: -1, name: "Заврши")
-        
-        // Specify that the route is intended for automobiles avoiding traffic
-        let routeOptions = NavigationRouteOptions(waypoints: [origin, destination], profileIdentifier: .automobileAvoidingTraffic)
-        
-        // Generate the route object and draw it on the map
         Directions.shared.calculate(routeOptions) { [weak self] (session, result) in
             switch result {
             case .failure(let error):
@@ -89,84 +156,207 @@ class RouteViewController: UIViewController, AnnotationInteractionDelegate {
                 
                 strongSelf.routeResponse = response
                 strongSelf.routeOptions = routeOptions
-                
-                // Draw the route on the map after creating it
                 strongSelf.drawRoute(route: route)
-                
+            
                 if var annotation = strongSelf.navigationMapView.pointAnnotationManager?.annotations.first {
-                    // Display callout view on destination annotation
                     annotation.textField = "Почни са Навигацијом"
                     annotation.textColor = .init(UIColor.white)
                     annotation.textHaloColor = .init(UIColor.systemBlue)
                     annotation.textHaloWidth = 2
                     annotation.textAnchor = .top
                     annotation.textRadialOffset = 1.0
-                    
                     strongSelf.beginAnnotation = annotation
                     strongSelf.navigationMapView.pointAnnotationManager?.annotations = [annotation]
+                    
                 }
             }
         }
     }
     
-    func drawRoute(route: Route) {
+    func getAnotationsInBounds(){
+        annotationsRig.removeAll()
+        refrence.child("locations").getData { [self] er, snap in
+            if er != nil {return}
+            else {
+                guard let locations = snap?.value as? [String:Any] else {return}
+                for i in locations{
+                    let one = i.value as! [String:Any]
+                    let long = one["lon"] as! Double
+                    let lat = one["lat"] as! Double
+                    let name = one["nameEng"] as! String
+                    let id = one["id"] as! String
+                    let namelat = one["nameLat"] as! String
+                    
+                    let coordinate = CLLocationCoordinate2D(latitude: lat, longitude: long)
+                    if getProximityAnnotations(start:Point(currentLocation!), end: Point(destionation!),coordinate: coordinate){
+                        
+                        var pointAnnotation = PointAnnotation(coordinate: coordinate)
+                        pointAnnotation.image = .init(image: UIImage(named: "pin")!, name: "location")
+                        pointAnnotation.iconAnchor = .bottom
+                        pointAnnotation.textField = namelat
+                        annotationsRig.append(pointAnnotation)
+                        let pointAnnotationManager = navigationMapView.mapView.annotations.makePointAnnotationManager()
+                        pointAnnotationManager.delegate = self
+                        
+                        storageRef.child(id).child("0.jpg").getData(maxSize: 10 * 1024 * 1024) { data, error in
+                            if let error = error {
+                                // Handle error
+                                print("Error downloading image: \(error.localizedDescription)")
+                            } else {
+                                // Load image into UIImageView or other UI element
+                                if let imageData = data, let image = UIImage(data: imageData) {
+                                    self.waypointsNamesAndImagesarray.updateValue(image, forKey: namelat)
+                                    print(image)
+                                } else {
+                                    print("Error loading image data")
+                                }
+                            }
+                        }
+                        pointAnnotationManager.annotations = annotationsRig
+                    } else {
+                        print("no annotations")
+                        
+                    }
+                }
+                
+            }
+        }
+    }
+    func getProximityAnnotations(start:Point,end:Point,coordinate:CLLocationCoordinate2D) -> Bool{
+        let west = min(start.coordinates.longitude, end.coordinates.longitude) - padding
+        let east = max(start.coordinates.longitude, end.coordinates.longitude) + padding
+        let south = min(start.coordinates.latitude, end.coordinates.latitude) - padding
+        let north = max(start.coordinates.latitude, end.coordinates.latitude) + padding
+        
+        if (coordinate.longitude > west && coordinate.longitude < east && coordinate.latitude > south && coordinate.latitude < north){
+            return true
+        } else {
+            return false
+        }
+    }
+    
+    
+    func drawRoute(route:MapboxDirections.Route) {
         
         navigationMapView.show([route])
         navigationMapView.showRouteDurations(along: [route])
         
-        // Show destination waypoint on the map
         navigationMapView.showWaypoints(on: route)
     }
-    
-    // Present the navigation view controller when the annotation is selected
     func annotationManager(_ manager: AnnotationManager, didDetectTappedAnnotations annotations: [Annotation]) {
-        guard annotations.first?.id == beginAnnotation?.id,
-              let routeResponse = routeResponse, let routeOptions = routeOptions else {
-            return
-        }
-        let navigationViewController = NavigationViewController(for: routeResponse, routeIndex: 0, routeOptions: routeOptions)
-        navigationViewController.modalPresentationStyle = .fullScreen
-        self.present(navigationViewController, animated: true, completion: nil)
-    }
-    func getLoc(coordinate:CLLocationCoordinate2D){
         
-        let start = Waypoint(coordinate: currentLocation!, coordinateAccuracy: -1, name: "Mapbox")
-        let end = Waypoint(coordinate: destionation!, coordinateAccuracy: -1, name: locname!)
-        let routeOptions = NavigationRouteOptions(waypoints: [start, end])
-        Directions.shared.calculate(routeOptions) { [weak self] (session, result) in
-            switch result {
-            case .failure(let error):
-                print(error.localizedDescription)
-            case .success(let response):
-                guard let strongSelf = self else {
+        if let anot = annotations.first as? PointAnnotation{
+            if anot.image?.name == "default_marker"{
+                holderView.isHidden = true
+                guard annotations.first?.id == beginAnnotation?.id,
+                      let routeResponse = routeResponse, let routeOptions = routeOptions else {
                     return
                 }
-                // Pass the generated route response to the the NavigationViewController
-                let viewController = NavigationViewController(for: response, routeIndex: 0, routeOptions: routeOptions)
-                viewController.modalPresentationStyle = .fullScreen
-                strongSelf.present(viewController, animated: true, completion: nil)
+                let navigationViewController = NavigationViewController(for: routeResponse, routeIndex: 0, routeOptions: routeOptions)
+               
+                navigationViewController.modalPresentationStyle = .fullScreen
+               
+
+                self.present(navigationViewController, animated: true, completion: nil)
+            }
+            if anot.isSelected {
+                selectedAnnotation = anot
+                updateHolderView(name: anot.textField!)
+            } else {
+                holderView.isHidden = true
             }
         }
-
     }
+    private func updateHolderView(name:String){
+        holderLabel.text = name
+        holderImageView.image = waypointsNamesAndImagesarray[name]
+        holderView.isHidden = false
+        
+    }
+
+    @IBAction func addToRout(_ sender: Any) {
+        
+        addedWaypointsArray.append(Waypoint(coordinate: (selectedAnnotation?.point.coordinates)!))
+        holderView.isHidden = true
+        
+    }
+    
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
-
         textFieldCurrent.frame = CGRect(x: 50, y: 100, width: view.bounds.width - 50*2, height: 50)
         textFieldCurrent.backgroundColor = .blue
         textFieldCurrent.textAlignment = .center
         textFieldCurrent.layer.cornerRadius = 10
-        textFieldCurrent.isUserInteractionEnabled = false
         textFieldCurrent.textColor = .white
-        textFieldCurrent.text  = cName
+        textFieldCurrent.text  = currentLocationName
         textFieldSelected.frame = CGRect(x: 50, y: 170, width: view.bounds.width - 50*2, height: 50)
         textFieldSelected.backgroundColor = .white
         textFieldSelected.textAlignment = .center
         textFieldSelected.layer.cornerRadius = 10
-        textFieldSelected.isUserInteractionEnabled = false
         textFieldSelected.textColor = .blue
-        textFieldSelected.text = locname!
+        textFieldSelected.text = destinationName!
         responseLabel.frame = CGRect(x: 50, y: textFieldCurrent.frame.maxY + 16, width: view.bounds.width - 50*2, height: 32)
+        let panelViewConstraints = [
+            panelController!.view.heightAnchor.constraint(equalToConstant: 50),
+            panelController!.view.leadingAnchor.constraint(equalTo: view.layoutMarginsGuide.leadingAnchor,constant: 25),
+            panelController!.view.trailingAnchor.constraint(equalTo: view.layoutMarginsGuide.trailingAnchor,constant:  -25),
+            panelController!.view.bottomAnchor.constraint(equalTo: view.layoutMarginsGuide.bottomAnchor,constant: -300),
+            panelController!.view.topAnchor.constraint(equalTo: view.layoutMarginsGuide.topAnchor, constant: CGFloat(heighConstraint))
+             ]
+        NSLayoutConstraint.activate(panelViewConstraints)
+       
     }
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+    }
+    
+    @IBAction func testtapped(_ sender: Any) {
+        waypointsArray.removeAll()
+        waypointsArray.append(Waypoint(coordinate:currentLocation!))
+        waypointsArray.append(contentsOf: addedWaypointsArray)
+        waypointsArray.append(Waypoint(coordinate: destionation!))
+        calculateNewRoute(pointes: waypointsArray)
+        
+    }
+    
 }
 
+extension RouteViewController: SearchControllerDelegate {
+    func categorySearchResultsReceived(category: MapboxSearchUI.SearchCategory, results: [MapboxSearch.SearchResult]) {
+        print("cSearch Recived")
+
+    }
+    func searchResultSelected(_ searchResult: SearchResult) {
+        if (isCurrentSearch == true){
+            currentLocation = searchResult.coordinate
+            currentLocationName = searchResult.name
+            panelController?.view.isHidden = true
+            textFieldSelected.isHidden = false
+            textFieldCurrent.isHidden = false
+        } else {
+            destionation = searchResult.coordinate
+            destinationName = searchResult.name
+            panelController?.view.isHidden = true
+            textFieldSelected.isHidden = false
+            textFieldCurrent.isHidden = false
+
+        }
+
+        
+        
+    }
+    func categorySearchResultsReceived(results: [SearchResult]) {
+        print("results recived")
+
+        
+    }
+    func userFavoriteSelected(_ userFavorite: FavoriteRecord) {
+        print("favourite recorded")
+        
+    }
+    @objc
+    func textFieldTextDidChanged() {
+        searchEngine.query = textFieldSelected.text!
+    }
+    
+}

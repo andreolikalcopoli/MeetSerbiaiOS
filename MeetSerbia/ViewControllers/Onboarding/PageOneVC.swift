@@ -57,7 +57,7 @@ class OnboardingPage1ViewController: UIViewController {
         button.setTitle("СЛЕДЕЋЕ", for: .normal)
         button.layer.cornerRadius = 8
         button.translatesAutoresizingMaskIntoConstraints = false
-        button.addTarget(self, action: #selector(nextPageButtonTapped), for: .touchUpInside)
+        button.addTarget(OnboardingPage1ViewController.self, action: #selector(nextPageButtonTapped), for: .touchUpInside)
         
         return button
     }()

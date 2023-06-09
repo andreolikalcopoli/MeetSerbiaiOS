@@ -20,16 +20,39 @@ class ProfileViewController:UIViewController,UIImagePickerControllerDelegate, UI
     @IBOutlet weak var coverImageView: UIImageView!
     @IBOutlet weak var profileImageView: UIImageView!
     var imageType: String?
-
-    
+    private var userDef = UserDefaults.standard
+    @IBOutlet weak var cirImage: UIImageView!
+    @IBOutlet weak var engImage: UIImageView!
+    @IBOutlet weak var latImage: UIImageView!
+    let vc = HomePageViewController()
     override func viewDidLoad() {
         super.viewDidLoad()
         uiSetup()
-    
+        
     }
     private func uiSetup(){
-   
+        if Constants().userDefKey == "eng" {
+            cirImage.alpha = 0.7
+            latImage.alpha = 0.7
+            engImage.alpha = 1
+        } else if Constants().userDefKey == "lat"{
+            cirImage.alpha = 0.7
+            latImage.alpha = 1
+            engImage.alpha = 0.7
+        }
+        else if Constants().userDefKey == "cir"{
+            cirImage.alpha = 1
+            latImage.alpha = 0.7
+            engImage.alpha = 0.7
+        } else {
+            cirImage.alpha = 1
+            latImage.alpha = 0.7
+            engImage.alpha = 0.7
+        }
         let profileTapGesture = UITapGestureRecognizer(target: self, action: #selector(profileImageTapped))
+        let cirTap = UITapGestureRecognizer(target: self, action: #selector(cirTapped))
+        let latTap = UITapGestureRecognizer(target: self, action: #selector(latTapped))
+        let engTap = UITapGestureRecognizer(target: self, action: #selector(engTapped))
         
         profileImageView.addGestureRecognizer(profileTapGesture)
         profileImageView.layer.borderWidth = 1.0
@@ -42,6 +65,12 @@ class ProfileViewController:UIViewController,UIImagePickerControllerDelegate, UI
         coverImageView.addGestureRecognizer(coverTapGesture)
         coverImageView.isUserInteractionEnabled = true
         profileImageView.isUserInteractionEnabled = true
+        cirImage.addGestureRecognizer(cirTap)
+        latImage.addGestureRecognizer(latTap)
+        engImage.addGestureRecognizer(engTap)
+        cirImage.isUserInteractionEnabled = true
+        latImage.isUserInteractionEnabled = true
+        engImage.isUserInteractionEnabled = true
         getData()
     }
     
@@ -74,7 +103,6 @@ class ProfileViewController:UIViewController,UIImagePickerControllerDelegate, UI
                 if let imageData = data {
                     let image = UIImage(data: imageData)
                     
-                    // Set the image to your cover ImageView
                     self.coverImageView.image = image
                 }
             }
@@ -93,13 +121,46 @@ class ProfileViewController:UIViewController,UIImagePickerControllerDelegate, UI
         }
         
     }
- 
+    
     @objc func profileImageTapped() {
         presentImagePicker(for: "profile")
     }
-
+    
     @objc func coverImageTapped() {
         presentImagePicker(for: "cover")
+    }
+    
+    @objc func engTapped() {
+        userDef.set("eng", forKey: "Language")
+        firstButton.setTitle(Constants().memoriesTabArray[2], for: .normal)
+        secondButton.setTitle(Constants().roomsArray[2], for: .normal)
+        thirdButton.setTitle(Constants().postsArray[2], for: .normal)
+        fourthButton.setTitle(Constants().membershipArray[2], for: .normal)
+        cirImage.alpha = 0.7
+        latImage.alpha = 0.7
+        engImage.alpha = 1
+    }
+    
+    @objc func latTapped() {
+        userDef.set("lat", forKey: "Language")
+        firstButton.setTitle(Constants().memoriesTabArray[1], for: .normal)
+        secondButton.setTitle(Constants().roomsArray[1], for: .normal)
+        thirdButton.setTitle(Constants().postsArray[1], for: .normal)
+        fourthButton.setTitle(Constants().membershipArray[1], for: .normal)
+        cirImage.alpha = 0.7
+        latImage.alpha = 1
+        engImage.alpha = 0.7
+    }
+    
+    @objc func cirTapped() {
+        userDef.set("cir", forKey: "Language")
+        firstButton.setTitle(Constants().memoriesTabArray[0], for: .normal)
+        secondButton.setTitle(Constants().roomsArray[0], for: .normal)
+        thirdButton.setTitle(Constants().postsArray[0], for: .normal)
+        fourthButton.setTitle(Constants().membershipArray[0], for: .normal)
+        cirImage.alpha = 1
+        latImage.alpha = 0.7
+        engImage.alpha = 0.7
     }
     func presentImagePicker(for imageType: String) {
         let imagePickerController = UIImagePickerController()
